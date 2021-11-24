@@ -9,5 +9,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int day = scanner.nextInt();
         System.out.println(day);
+
+        Parent ama = new Parent();
+        System.out.println(ama.name());
     }
 }
