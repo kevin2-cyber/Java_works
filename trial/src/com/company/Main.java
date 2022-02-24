@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Labclass labclass = new Labclass();
-        System.out.println(labclass.numberofStudents());
+        System.out.println(labclass.numberOfStudents());
     }
 }
 
 class Labclass {
-    public int numberofStudents() {
+    public int numberOfStudents() {
         int dog = 5;
         return 0;
     }
