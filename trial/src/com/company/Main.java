@@ -12,6 +12,6 @@ public class Main {
 class Labclass {
     public int numberOfStudents() {
         int dog = 5;
-        return 0;
+        return dog;
     }
 }
