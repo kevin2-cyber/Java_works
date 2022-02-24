@@ -1,3 +1,6 @@
+// A console application is an application to work with data input and output in a command line
+// With access to 3 basic data streams : standard input, standard output and standard error
+
 package com.practice;
 
 import java.util.Scanner;

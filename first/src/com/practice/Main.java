@@ -17,6 +17,7 @@ public class Main {
         String protist = animal.Protista();
         System.out.println(protist);
     }
+    
 
 
     public static String function(String name) {
