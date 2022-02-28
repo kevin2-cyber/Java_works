@@ -16,11 +16,11 @@ public class Main {
         Parent ama = new Parent();
         System.out.println(ama.name());*/
         int car = 20;
+        var hello = "How are you";
+        float h = 1.2f;
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextInt());
-        var hello = "How are you";
-        float h = 1.2f;
         System.out.println(cara());
     }
 
