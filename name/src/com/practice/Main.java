@@ -23,6 +23,8 @@ public class Main {
         short s = 2;
         byte b = 1;
         char c = 'c';
+        char c1 = 100;
+        System.out.println(c1);
         boolean b1 = true;
         double d1 = 1.3;
         System.out.println(hello.toUpperCase(Locale.ROOT));
