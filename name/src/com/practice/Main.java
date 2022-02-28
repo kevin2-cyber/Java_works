@@ -35,9 +35,12 @@ public class Main {
         System.out.println(b2);
         System.out.println(hello.toUpperCase(Locale.ROOT));
         System.out.println(car);
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(scanner.nextInt());
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println(scanner.nextInt());
         System.out.println(cara());
+        long number = 499_999_999_000_000_001L;
+        double converted = (double) number;
+        System.out.println(converted);
     }
 
     public static int cara() {
