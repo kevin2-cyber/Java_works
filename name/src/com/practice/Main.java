@@ -30,6 +30,9 @@ public class Main {
         int i3 = s;
         double d2 = i3;
         d2 = l;
+        b = (byte)i3;
+        byte b2 = (byte)1000;
+        System.out.println(b2);
         System.out.println(hello.toUpperCase(Locale.ROOT));
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
