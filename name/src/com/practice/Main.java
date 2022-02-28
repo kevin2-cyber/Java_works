@@ -20,6 +20,10 @@ public class Main {
         float h = 1.2f;
         long l = 4;
         short s = 2;
+        byte b = 1;
+        int i = 20;
+        char c = 'c';
+        boolean b1 = true;
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextInt());
