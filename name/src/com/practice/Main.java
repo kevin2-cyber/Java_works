@@ -7,13 +7,18 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static synchronized void main(String[] args) throws InterruptedException{
 	// Using the Scanner class
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int day = scanner.nextInt();
         System.out.println(day);
 
         Parent ama = new Parent();
-        System.out.println(ama.name());
+        System.out.println(ama.name());*/
+        Thread thread = new Thread();
+        thread.start();
+        System.out.print("A");
+        thread.wait(1000);
+        System.out.print("B");
     }
 }
