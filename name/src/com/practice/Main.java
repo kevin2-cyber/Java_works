@@ -27,6 +27,9 @@ public class Main {
         System.out.println(c1);
         boolean b1 = true;
         double d1 = 1.3;
+        int i3 = s;
+        double d2 = i3;
+        d2 = l;
         System.out.println(hello.toUpperCase(Locale.ROOT));
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
