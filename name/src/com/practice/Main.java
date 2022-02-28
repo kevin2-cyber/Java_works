@@ -41,6 +41,8 @@ public class Main {
         long number = 499_999_999_000_000_001L;
         double converted = (double) number;
         System.out.println(number - (long) converted);
+        Integer i4 = 1;
+        int i5 = i4;
     }
 
     public static int cara() {
