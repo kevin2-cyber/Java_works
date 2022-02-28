@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static synchronized void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) {
 	// Using the Scanner class
         /*Scanner scanner = new Scanner(System.in);
         int day = scanner.nextInt();
@@ -15,10 +15,13 @@ public class Main {
 
         Parent ama = new Parent();
         System.out.println(ama.name());*/
-        Thread thread = new Thread();
-        thread.start();
-        System.out.print("A");
-        thread.wait(1000);
-        System.out.print("B");
+        int car = 20;
+        System.out.println(car);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(cara());
+    }
+
+    public static int cara() {
+        return 0;
     }
 }
