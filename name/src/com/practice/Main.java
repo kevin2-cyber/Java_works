@@ -3,6 +3,7 @@
 
 package com.practice;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +25,7 @@ public class Main {
         char c = 'c';
         boolean b1 = true;
         double d1 = 1.3;
+        System.out.println(hello.toUpperCase(Locale.ROOT));
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextInt());
