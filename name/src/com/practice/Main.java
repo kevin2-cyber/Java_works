@@ -18,6 +18,7 @@ public class Main {
         int car = 20;
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
+        System.out.println(scanner.nextInt());
         var hello = "How";
         float h = 1.2f;
         System.out.println(cara());
