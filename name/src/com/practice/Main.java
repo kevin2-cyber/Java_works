@@ -21,9 +21,9 @@ public class Main {
         long l = 4;
         short s = 2;
         byte b = 1;
-        int i = 20;
         char c = 'c';
         boolean b1 = true;
+        double d1 = 1.3;
         System.out.println(car);
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextInt());
