@@ -40,7 +40,7 @@ public class Main {
         System.out.println(cara());
         long number = 499_999_999_000_000_001L;
         double converted = (double) number;
-        System.out.println(converted);
+        System.out.println(number - (long) converted);
     }
 
     public static int cara() {
