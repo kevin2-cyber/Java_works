@@ -16,7 +16,8 @@ public class Main {
 
         Parent ama = new Parent();
         System.out.println(ama.name());*/
-        int car = 20;
+        // Numeric types
+        /*int car = 20;
         var hello = "How are you";
         float h = 1.2f;
         long l = 4;
@@ -42,10 +43,10 @@ public class Main {
         double converted = (double) number;
         System.out.println(number - (long) converted);
         Integer i4 = 1;
-        int i5 = i4;
+        int i5 = i4;*/
     }
 
-    public static int cara() {
+    /*public static int cara() {
         return 0;
-    }
+    }*/
 }
