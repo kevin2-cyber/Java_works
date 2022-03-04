@@ -58,6 +58,7 @@ public class Main {
         int arr2[];
 
         arr = new int[10];
+        System.out.println(arr.length);
         // System.out.println(arr[0]);
 
         double[] arr3 = new double[10];
@@ -69,6 +70,8 @@ public class Main {
 
 
         int[] arr5 = {3, 2, 1};
+
+        int[][] matrix = {};
 
 
     }
