@@ -53,6 +53,24 @@ public class Main {
         System.out.println(bin);
         System.out.println(oct);
         System.out.println(hex);*/
+        // Arrays
+        int[] arr;
+        int arr2[];
+
+        arr = new int[10];
+        // System.out.println(arr[0]);
+
+        double[] arr3 = new double[10];
+        // System.out.println(arr3[0]);
+
+        boolean[] arr4 = new boolean[10];
+        // System.out.println(arr4[0]);
+        // System.out.println(arr4[10]);
+
+
+        int[] arr5 = {3, 2, 1};
+
+
     }
 
     /*public static int cara() {
