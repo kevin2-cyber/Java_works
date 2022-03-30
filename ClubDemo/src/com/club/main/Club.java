@@ -42,7 +42,7 @@ public class Club {
             if (member.getName().contains(names)) {
                 System.out.println(member.toString());
             } else {
-                System.out.println("Ouch naw");
+                System.out.println("Ouch naw .... Member not found");
             }
         }
     }
