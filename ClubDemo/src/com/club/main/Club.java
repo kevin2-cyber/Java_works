@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Club {
-    private ArrayList<Membership> members;
+    private final ArrayList<Membership> members;
 
     public Club() {
         members = new ArrayList<>();
