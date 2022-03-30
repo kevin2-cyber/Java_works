@@ -39,7 +39,7 @@ public class Club {
 
     public void searchMember(String names) {
         for (Membership member: members) {
-            if (member.getName() == names) {
+            if (member.getName().contains(names)) {
                 System.out.println(member.toString());
             } else {
                 System.out.println("Ouch naw");

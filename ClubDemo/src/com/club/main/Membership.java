@@ -1,9 +1,9 @@
 package com.club.main;
 
 public class Membership {
-    private String name;
-    private int month;
-    private int year;
+    private final String name;
+    private final int month;
+    private final int year;
 
     public Membership(String name, int month, int year) throws IllegalArgumentException {
         if(month < 1 || month > 12) {
