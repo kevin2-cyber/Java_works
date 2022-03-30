@@ -14,7 +14,7 @@ public class ClubDemo {
         club.listMembers1();
         System.out.println("Using while loop....");
         club.listMembers2();
-        System.out.println("Using iteraror...");
+        System.out.println("Using iterator...");
         club.listMembers3();
         System.out.println("Now doing some searching...");
         club.searchMember("mon");
