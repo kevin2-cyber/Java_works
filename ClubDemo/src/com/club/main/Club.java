@@ -1,7 +1,7 @@
 package com.club.main;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
+//import java.util.Iterator;
 
 public class Club {
     private final ArrayList<Membership> members;
