@@ -67,7 +67,9 @@ public class LogEntry implements Comparable<LogEntry> {
         when = Calendar.getInstance();
         // Adjust from 1-based month and day to 0-based.
         when.set(dataValues[YEAR],
-                dataValues[MONTH] - 1, dataValues[DAY] - 1,
-                dataValues[HOUR], dataValues[MINUTE]);
+                dataValues[MONTH] - 1,
+                dataValues[DAY] - 1,
+                dataValues[HOUR],
+                dataValues[MINUTE]);
     }
 }
