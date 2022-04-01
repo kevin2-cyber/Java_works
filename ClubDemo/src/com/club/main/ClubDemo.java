@@ -1,10 +1,14 @@
 package com.club.main;
 
 public class ClubDemo {
+
     private Club club;
+
     public ClubDemo() {
+
         club = new Club();
     }
+
     public void demo() {
         club = new Club();
         club.join(
