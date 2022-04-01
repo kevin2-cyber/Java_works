@@ -71,7 +71,7 @@ public class Club {
     public void searchMember(String names) {
         for (Membership member: members) {
             if (member.getName().contains(names)) {
-                System.out.println(member.toString());
+                System.out.println(member);
             } else {
                 System.out.println("Ouch naw .... Member not found");
             }
