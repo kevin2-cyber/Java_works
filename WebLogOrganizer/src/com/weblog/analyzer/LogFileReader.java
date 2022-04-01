@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class LogfileReader implements Iterator<LogEntry> {
+public class LogFileReader implements Iterator<LogEntry> {
 
     private String format;
     // Where the file's contents are stored in the form
@@ -18,12 +18,12 @@ public class LogfileReader implements Iterator<LogEntry> {
     // An iterator over entries.
     private Iterator<LogEntry> dataIterator;
 
-    public LogfileReader() {
+    public LogFileReader() {
 
         this("weblog.txt");
     }
 
-    public LogfileReader(String fileName) {
+    public LogFileReader(String fileName) {
         // The format for the data.
         format = "Year Month(1-12) Day Hour Minute";
         // Where to store the data.
