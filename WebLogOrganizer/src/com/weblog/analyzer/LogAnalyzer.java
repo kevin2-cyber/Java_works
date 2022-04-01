@@ -41,4 +41,21 @@ public class LogAnalyzer {
         return total;
     }
 
+    public int quietHour() {
+        int smallNumber = hourCounts[0];
+        int sim = 0;
+        for (int hourCount : hourCounts) {
+            if (hourCount < smallNumber) {
+                smallNumber = hourCount;
+            }
+        }
+        for (int i = 0; i < hourCounts.length; i++) {
+            if (smallNumber == hourCounts[i]) {
+                sim = i;
+                break;
+            }
+        }
+        return sim;
+    }
+
 }

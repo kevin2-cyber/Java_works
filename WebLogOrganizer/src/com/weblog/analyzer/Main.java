@@ -6,5 +6,7 @@ public class Main {
     logAnalyzer.numberOfAccesses();
     logAnalyzer.printData();
     logAnalyzer.printHourlyCounts();
+    logAnalyzer.quietHour();
+    logAnalyzer.analyzeHourlyData();
     }
 }
