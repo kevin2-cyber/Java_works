@@ -7,9 +7,27 @@ public class ClubDemo {
     }
     public void demo() {
         club = new Club();
-        club.join(new Membership("Gordy Broon", 1, 1972));
-        club.join(new Membership("Eck Salmon", 9, 1965));
-        club.join(new Membership("Davie Caramel", 5, 1960));
+        club.join(
+                new Membership(
+                        "Gordy Broon",
+                        1,
+                        1972
+                )
+        );
+        club.join(
+                new Membership(
+                        "Eck Salmon",
+                        9,
+                        1965
+                )
+        );
+        club.join(
+                new Membership(
+                        "Davie Caramel",
+                        5,
+                        1960
+                )
+        );
         System.out.println("Using for-each ....");
         club.listMembers1();
         System.out.println("Using while loop....");
