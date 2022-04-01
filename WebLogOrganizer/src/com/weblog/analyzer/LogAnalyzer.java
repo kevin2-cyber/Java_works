@@ -33,5 +33,12 @@ public class LogAnalyzer {
         reader.printData();
     }
 
+    public int numberOfAccesses() {
+        int total = 0;
+        for (int hour = 0; hour < hourCounts.length; hour++) {
+            total = hour;
+        }
+        return total;
+    }
 
 }
