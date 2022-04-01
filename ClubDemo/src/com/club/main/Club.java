@@ -64,6 +64,9 @@ public class Club {
             System.out.println(members.get(member));
         }
     }
+    public void listMembers8() {
+        members.forEach(System.out::println);
+    }
 
     public void searchMember(String names) {
         for (Membership member: members) {

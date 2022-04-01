@@ -42,6 +42,8 @@ public class ClubDemo {
         club.listMembers6();
         System.out.println("Using the traditional for loop...");
         club.listMembers7();
+        System.out.println("Using forEach lambda...");
+        club.listMembers8();
         System.out.println("Now doing some searching...");
         club.searchMember("mon");
         System.out.println("And some more searching...");
