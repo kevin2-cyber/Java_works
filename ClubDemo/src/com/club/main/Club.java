@@ -1,18 +1,21 @@
 package com.club.main;
 
-import java.util.*;
-//import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Club {
     private final ArrayList<Membership> members;
 
     public Club() {
+
         members = new ArrayList<>();
     }
     public void join(Membership member) {
+
         members.add(member);
     }
     public int numberOfMembers() {
+
         return members.size();
     }
 
