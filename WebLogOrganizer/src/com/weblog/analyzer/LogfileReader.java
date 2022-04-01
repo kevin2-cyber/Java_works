@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class LogfileReader implements Iterator<LogEntry> {
-    // The data format in the log file.
+
     private String format;
     // Where the file's contents are stored in the form
     // of LogEntry objects.
@@ -68,6 +68,7 @@ public class LogfileReader implements Iterator<LogEntry> {
     public LogEntry next() {
         return dataIterator.next();
     }
+
     public void remove() {
         System.err.println("It is not permitted to remove entries.");
     }
@@ -75,6 +76,7 @@ public class LogfileReader implements Iterator<LogEntry> {
     public String getFormat() {
         return format;
     }
+
     public void reset() {
         dataIterator = entries.iterator();
     }
@@ -94,4 +96,5 @@ public class LogfileReader implements Iterator<LogEntry> {
             data.add(creator.createEntry());
         }
     }
+
 }
