@@ -30,10 +30,12 @@ public class LogEntry implements Comparable<LogEntry> {
     }
 
     public int getHour() {
+
         return dataValues[HOUR];
     }
 
     public int getMinute() {
+
         return dataValues[MINUTE];
     }
 
@@ -57,6 +59,7 @@ public class LogEntry implements Comparable<LogEntry> {
     }
 
     private Calendar getWhen() {
+
         return when;
     }
 
