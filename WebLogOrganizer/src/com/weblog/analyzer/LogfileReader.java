@@ -19,6 +19,7 @@ public class LogfileReader implements Iterator<LogEntry> {
     private Iterator<LogEntry> dataIterator;
 
     public LogfileReader() {
+
         this("weblog.txt");
     }
 
@@ -62,22 +63,27 @@ public class LogfileReader implements Iterator<LogEntry> {
     }
 
     public boolean hasNext() {
+
         return dataIterator.hasNext();
     }
 
     public LogEntry next() {
+
         return dataIterator.next();
     }
 
     public void remove() {
+
         System.err.println("It is not permitted to remove entries.");
     }
 
     public String getFormat() {
+
         return format;
     }
 
     public void reset() {
+
         dataIterator = entries.iterator();
     }
 
