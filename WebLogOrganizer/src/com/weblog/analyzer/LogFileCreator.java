@@ -7,10 +7,10 @@ import java.util.Random;
 
 // import static java.time.format.DateTimeTextProvider.createEntry;
 
-public class LogfileCreator {
+public class LogFileCreator {
     private Random rand;
 
-    public LogfileCreator() {
+    public LogFileCreator() {
         rand = new Random();
     }
     public boolean createFile(String filename, int numEntries)

@@ -95,7 +95,7 @@ public class LogfileReader implements Iterator<LogEntry> {
     }
 
     private void createSimulatedData(ArrayList<LogEntry> data) {
-        LogfileCreator creator = new LogfileCreator();
+        LogFileCreator creator = new LogFileCreator();
         // How many simulated entries we want.
         int numEntries = 100;
         for (int i = 0; i < numEntries; i++) {
