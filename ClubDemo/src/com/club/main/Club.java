@@ -1,11 +1,11 @@
 package com.club.main;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.ListIterator;
 
 public class Club {
+
     private final ArrayList<Membership> members;
 
     public Club() {
