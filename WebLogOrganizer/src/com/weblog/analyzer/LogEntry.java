@@ -13,7 +13,7 @@ public class LogEntry implements Comparable<LogEntry> {
         // The array to store the data for a single line.
         dataValues = new int[NUMBER_OF_FIELDS];
         // Break up the log line.
-        LoglineTokenizer tokenizer = new LoglineTokenizer();
+        LogLineTokenizer tokenizer = new LogLineTokenizer();
         tokenizer.tokenize(logline,dataValues);
         setWhen();
     }
