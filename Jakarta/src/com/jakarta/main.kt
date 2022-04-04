@@ -5,4 +5,7 @@ fun main() {
     val name = "Kelvin"
     println(name)
 
+    val script = Script(20, 30)
+    println(script)
+
 }
