@@ -10,6 +10,9 @@ public class Main {
 //
 //        short shortTotal = (short) (10000 + 10 * (myByte + myShort + myInt));
 //        System.out.println("shortTotal = " + shortTotal);
-
+    float myMaxFloat = Float.MAX_VALUE;
+    float myMinFloat = Float.MIN_VALUE;
+        System.out.println("myMaxFloat = " + myMaxFloat);
+        System.out.println("myMinFloat = " + myMinFloat);
     }
 }
