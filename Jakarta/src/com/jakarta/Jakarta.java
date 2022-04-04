@@ -1,7 +1,6 @@
 package com.jakarta;
 
 
-import java.util.Scanner;
 
 public class Jakarta {
     public static void main(String[] args) {
