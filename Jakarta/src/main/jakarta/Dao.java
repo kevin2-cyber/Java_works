@@ -19,4 +19,12 @@ public class Dao {
     public int getMoney() {
         return money;
     }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
 }
