@@ -5,7 +5,10 @@ public class Main {
         byte myByte = 19;
         short myShort = 20;
         int myInt = 200;
-        long myLong = 50000 + (10 * (myByte + myShort + myInt));
-        System.out.println("myLong = " + myLong);
+        long longTotal = 50000 + (10 * (myByte + myShort + myInt));
+        System.out.println("longTotal = " + longTotal);
+
+        short shortTotal = (short) (10000 + 10 * (myByte + myShort + myInt));
+        System.out.println("shortTotal = " + shortTotal);
     }
 }
