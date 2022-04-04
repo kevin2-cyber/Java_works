@@ -12,21 +12,21 @@ public class Main {
 //
 //        short shortTotal = (short) (10000 + 10 * (myByte + myShort + myInt));
 //        System.out.println("shortTotal = " + shortTotal);
-    float myMaxFloat = Float.MAX_VALUE;
-    float myMinFloat = Float.MIN_VALUE;
-        System.out.println("myMaxFloat = " + myMaxFloat);
-        System.out.println("myMinFloat = " + myMinFloat);
-
-    double myMaxDouble = Double.MAX_VALUE;
-    double myMinDouble = Double.MIN_VALUE;
-        System.out.println("myMaxDouble = " + myMaxDouble);
-        System.out.println("myMinDouble = " + myMinDouble);
+//    float myMaxFloat = Float.MAX_VALUE;
+//    float myMinFloat = Float.MIN_VALUE;
+//        System.out.println("myMaxFloat = " + myMaxFloat);
+//        System.out.println("myMinFloat = " + myMinFloat);
+//
+//    double myMaxDouble = Double.MAX_VALUE;
+//    double myMinDouble = Double.MIN_VALUE;
+//        System.out.println("myMaxDouble = " + myMaxDouble);
+//        System.out.println("myMinDouble = " + myMinDouble);
+        printData();
     }
 
-    public void printData(String data) {
+    public static void printData() {
         Scanner scanner = new Scanner(System.in);
         var name = scanner.nextLine();
-        data = name;
         System.out.println("name = " + name);
     }
 }
