@@ -1,5 +1,7 @@
 package main.jakarta;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 //        byte myByte = 19;
@@ -19,5 +21,12 @@ public class Main {
     double myMinDouble = Double.MIN_VALUE;
         System.out.println("myMaxDouble = " + myMaxDouble);
         System.out.println("myMinDouble = " + myMinDouble);
+    }
+
+    public void printData(String data) {
+        Scanner scanner = new Scanner(System.in);
+        var name = scanner.nextLine();
+        data = name;
+        System.out.println("name = " + name);
     }
 }
