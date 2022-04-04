@@ -1,9 +1,7 @@
 package com.jakarta
 
-import main.jakarta.Main
+import main.jakarta.Dao
 
-open class Script : Main() {
-    override fun printData() {
-        super.printData()
-    }
+class Script : Dao() {
+
 }

@@ -1,10 +1,13 @@
 package main.jakarta;
 
-import com.jakarta.Script;
 
-public class Dao extends Script {
+import java.util.Scanner;
+
+public class Dao extends Main {
     @Override
     public void printData() {
-        super.printData();
+        Scanner scanner = new Scanner(System.in);
+        int dec = scanner.nextInt();
+        System.out.println("dec = " + dec);
     }
 }
