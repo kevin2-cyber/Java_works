@@ -21,12 +21,14 @@ public class Main {
 //    double myMinDouble = Double.MIN_VALUE;
 //        System.out.println("myMaxDouble = " + myMaxDouble);
 //        System.out.println("myMinDouble = " + myMinDouble);
-        printData();
+
     }
 
-    public static void printData() {
+    public void printData() {
         Scanner scanner = new Scanner(System.in);
         var name = scanner.nextLine();
         System.out.println("name = " + name);
     }
+
+
 }
