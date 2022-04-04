@@ -14,5 +14,10 @@ public class Main {
     float myMinFloat = Float.MIN_VALUE;
         System.out.println("myMaxFloat = " + myMaxFloat);
         System.out.println("myMinFloat = " + myMinFloat);
+
+    double myMaxDouble = Double.MAX_VALUE;
+    double myMinDouble = Double.MIN_VALUE;
+        System.out.println("myMaxDouble = " + myMaxDouble);
+        System.out.println("myMinDouble = " + myMinDouble);
     }
 }
