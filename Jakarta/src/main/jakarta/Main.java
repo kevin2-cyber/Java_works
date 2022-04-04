@@ -6,5 +6,6 @@ public class Main {
         short myShort = 20;
         int myInt = 200;
         long myLong = 50000 + (10 * (myByte + myShort + myInt));
+        System.out.println("myLong = " + myLong);
     }
 }
