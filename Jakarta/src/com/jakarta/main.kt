@@ -7,5 +7,6 @@ fun main() {
 
     val script = Script(20, 30)
     println(script.data)
+    println(script.money)
 
 }
