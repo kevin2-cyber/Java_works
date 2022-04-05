@@ -4,7 +4,7 @@ public class StackOverflowErrorExample {
     public static void recursivePrint(long num) {
         System.out.println("Number " + num);
         if (num == 0) {
-            return;
+            System.out.println("Hello World");
         } else {
             recursivePrint(++num);
         }
