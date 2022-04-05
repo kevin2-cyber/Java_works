@@ -2,6 +2,7 @@ package com.jakarta
 
 import main.jakarta.Main.printData
 
+
 fun main() {
     println("Hello World")
     val name = "Kelvin"
