@@ -11,6 +11,6 @@ public class StackOverflowErrorExample {
     }
 
     public static void main(String[] args) {
-        StackOverflowErrorExample.recursivePrint(1);
+        StackOverflowErrorExample.recursivePrint(0);
     }
 }
