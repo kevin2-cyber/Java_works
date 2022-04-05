@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
     printData();
         Script script = new Script(20,30);
+        System.out.println("script = " + script);
     }
 
     public static void printData() {
