@@ -1,7 +1,7 @@
 package main.jakarta;
 
 
-
+import com.jakarta.Script;
 
 public class Dao {
     private int data;
@@ -27,4 +27,5 @@ public class Dao {
     public void setMoney(int money) {
         this.money = money;
     }
+    Script script = new Script(20, 30);
 }
