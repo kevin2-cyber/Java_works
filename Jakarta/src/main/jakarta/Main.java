@@ -1,10 +1,13 @@
 package main.jakarta;
 
+import com.jakarta.Script;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
     printData();
+        Script script = new Script(20,30);
     }
 
     public static void printData() {
