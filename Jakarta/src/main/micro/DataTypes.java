@@ -15,5 +15,8 @@ public class DataTypes {
         int myInt = 50;
       lastString = lastString + myInt;
       System.out.println("LastString is equal to " + lastString);
+      double doubleNumber = 120.47;
+      lastString = lastString + doubleNumber;
+      System.out.println("LastString is equal to " + lastString);
     }
 }
