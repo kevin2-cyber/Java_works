@@ -11,5 +11,9 @@ public class DataTypes {
         String numberString = "250.55";
         numberString = numberString + "49.55";
         System.out.println("numberString = " + numberString);
+        String lastString = "10";
+        int myInt = 50;
+        lastString = lastString + myInt;
+      System.out.println("LastString is equal to " + lastString);
     }
 }
