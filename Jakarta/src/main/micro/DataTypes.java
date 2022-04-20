@@ -13,7 +13,7 @@ public class DataTypes {
         System.out.println("numberString = " + numberString);
         String lastString = "10";
         int myInt = 50;
-        lastString = lastString + myInt;
+      lastString = lastString + myInt;
       System.out.println("LastString is equal to " + lastString);
     }
 }
