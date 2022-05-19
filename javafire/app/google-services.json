@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65491395419",
+    "project_id": "javafire-dd4a5",
+    "storage_bucket": "javafire-dd4a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65491395419:android:37c6784c27df1f2a9f307e",
+        "android_client_info": {
+          "package_name": "com.codelab.javafire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65491395419-3b8b7nj0l5qvr0bu9ng4or30fds1arka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALn8WWcDzCUBE0-O0dMKiAlLr7m_HmpZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65491395419-3b8b7nj0l5qvr0bu9ng4or30fds1arka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
