@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Javafire</string>
+    <string name="miniTitle">Firebase login App using Java</string>
 </resources>

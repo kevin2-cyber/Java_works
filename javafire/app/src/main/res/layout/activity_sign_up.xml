@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#C1DCF1"
     tools:context=".SignUpActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/titleLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        android:fontFamily="@font/red_rose"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Create a New Account"
+        android:fontFamily="@font/red_rose"
+        android:layout_below="@+id/titleLabelTv"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        tools:ignore="HardcodedText" />
+
+
+    <!--Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTil"
+        android:layout_above="@+id/passwordTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/red_rose"
+            android:hint="Email"
+            android:autofillHints="emailAddress"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTil"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:fontFamily="@font/red_rose"
+            android:hint="Password"
+            tools:ignore="HardcodedText"
+            android:autofillHints="password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!--Sign Up button-->
+    <Button
+        android:id="@+id/signupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:fontFamily="@font/red_rose"
+        android:textFontWeight="500"
+        android:textColor="#8B93BF"
+        android:layout_below="@+id/passwordTil"
+        android:background="@drawable/round_style"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/accountTv"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/red_rose"
+        android:padding="5dp"
+        android:text=" Already having an account?"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/account"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="63dp"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/red_rose"
+        android:padding="5dp"
+        android:text="Sign in"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+
+
+</RelativeLayout>
