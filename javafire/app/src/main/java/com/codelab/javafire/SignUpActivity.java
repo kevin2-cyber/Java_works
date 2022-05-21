@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,11 +33,11 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // credentials
-    private String email = "";
+    private String email;
 
-    private String password = "";
+    private String password;
 
-    @SuppressLint("ProgressDialog")
+    @SuppressLint("Deprecated")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         // configure progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Creating account...");
+        progressDialog.setMessage("Creating account");
         progressDialog.setCanceledOnTouchOutside(false);
 
         // init firebase auth

@@ -100,7 +100,7 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/noAccountTv"
+        android:id="@+id/noAccount"
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

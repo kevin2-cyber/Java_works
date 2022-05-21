@@ -13,6 +13,8 @@ import com.codelab.javafire.databinding.ActivityLoginBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
 
     // viewBinding
@@ -21,9 +23,9 @@ public class LoginActivity extends AppCompatActivity {
     // progressDialog
     private ProgressDialog progressDialog;
 
-    private String email = "";
+    private String email;
 
-    private String password = "";
+    private String password;
 
     // Firebase Auth
     private FirebaseAuth mAuth;
@@ -34,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         mBinding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         // configure progressDialog
         progressDialog = new ProgressDialog(this);
@@ -47,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         checkUser();
 
         // handle click, open SignUpActivity
-        mBinding.noAccountTv.setOnClickListener(view -> {
+        mBinding.noAccount.setOnClickListener(view -> {
             startActivity(new Intent(this, SignUpActivity.class));
         });
 
