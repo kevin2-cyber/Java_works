@@ -9,6 +9,12 @@ public class Number {
         int scan = scanner.nextInt();
         NumberDisplay numberDisplay = new NumberDisplay(scan);
 
+        ClockDisplay clockDisplay = new ClockDisplay();
+
+        clockDisplay.timeTick();
+        clockDisplay.timeTick();
+        clockDisplay.timeTick();
+
         numberDisplay.increment();
         numberDisplay.increment();
         numberDisplay.increment();
