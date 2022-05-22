@@ -2,10 +2,15 @@ package main.exam;
 
 public class Exam {
     public static void main(String[] args) {
-        int[] array = {120, 200, 016};
 
-        for (int j : array) {
-            System.out.println("array = " + j);
-        }
+        Name name = new Name("Kofi", "Manu");
+
+        System.out.println("name = " + name.addNames());
+
+        int integer = Integer.MAX_VALUE;
+
+        long longVal = Long.MAX_VALUE;
+        System.out.println("integer = " + integer + "\n" + "long = " + longVal);
     }
+
 }
