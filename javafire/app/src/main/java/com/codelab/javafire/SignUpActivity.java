@@ -66,9 +66,8 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         // navigate to login activity
-        mBinding.account.setOnClickListener(view -> {
-            startActivity(new Intent(this, LoginActivity.class));
-        });
+        mBinding.account.setOnClickListener(view ->
+                startActivity(new Intent(this, LoginActivity.class)));
     }
 
     private void validateData() {
