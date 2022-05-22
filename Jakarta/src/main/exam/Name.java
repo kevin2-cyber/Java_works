@@ -1,8 +1,11 @@
 package main.exam;
 
+import java.util.Scanner;
+
 public class Name {
-    private final String firstName;
-    private final String surName;
+    private String firstName = null;
+    private String surName = null;
+
 
     public Name(String firstName, String surName) {
         this.firstName = firstName;
@@ -17,7 +20,6 @@ public class Name {
         return surName;
     }
 
-    public String addNames() {
-        return getFirstName() + " " +getSurName();
-    }
+    Scanner scanner = new Scanner(System.in);
+    String names = scanner.nextLine();
 }

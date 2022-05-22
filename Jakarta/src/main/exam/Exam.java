@@ -3,9 +3,9 @@ package main.exam;
 public class Exam {
     public static void main(String[] args) {
 
-        Name name = new Name("Kofi", "Manu");
+        Name name = new Name("", "");
 
-        System.out.println("name = " + name.addNames());
+        System.out.println("name = " + name.getFirstName());
 
         int integer = Integer.MAX_VALUE;
 
