@@ -1,4 +1,4 @@
-package main.ticketmachine;
+package exam.aircondition.ticketmachine;
 
 
 public class TicketMachine {

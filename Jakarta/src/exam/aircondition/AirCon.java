@@ -1,4 +1,4 @@
-package main.aircondition;
+package exam.aircondition;
 
 public class AirCon {
     private int temperature;

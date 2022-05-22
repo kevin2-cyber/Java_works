@@ -1,4 +1,4 @@
-package main.aircondition;
+package exam.aircondition;
 
 
 import java.util.Scanner;

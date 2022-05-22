@@ -1,4 +1,4 @@
-package main.ticketmachine;
+package exam.aircondition.ticketmachine;
 
 import java.util.Scanner;
 
