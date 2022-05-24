@@ -22,7 +22,4 @@ class ExampleInstrumentedTest {
         assertEquals("com.codelab.buildandroid", appContext.packageName)
     }
 
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
 }
