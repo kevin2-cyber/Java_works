@@ -58,6 +58,7 @@ dependencies {
     // Firebase-ui
     implementation 'com.firebaseui:firebase-ui-auth:8.0.1'
     implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    implementation 'androidx.test:monitor:1.5.0'
 
     // Testing dependencies
     testImplementation 'junit:junit:4.13.2'
