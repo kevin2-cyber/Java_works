@@ -24,7 +24,7 @@ class SignInActivity : AppCompatActivity() {
         registerForActivityResult(FirebaseAuthUIActivityResultContract(), this::onSignInResult)
 
     // Firebase instance variables
-    private lateinit var auth: FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Initialize FirebaseAuth
-        auth = Firebase.auth
+        mAuth = Firebase.auth
     }
 
     public override fun onStart() {

@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // implement Firebase instance variables
-    private lateinit var auth: FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
 
 
         // Initialize Firebase Auth and check if the user is signed in
-        auth = Firebase.auth
-        if (auth.currentUser == null) {
+        mAuth = Firebase.auth
+        if (mAuth.currentUser == null) {
             // Not signed in, launch the Sign In activity
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in
-        if (auth.currentUser == null) {
+        if (mAuth.currentUser == null) {
             // Not signed in, launch the Sign In activity
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
@@ -119,12 +119,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getPhotoUrl(): String? {
-        val user = auth.currentUser
+        val user = mAuth.currentUser
         return user?.photoUrl?.toString()
     }
 
     private fun getUserName(): String? {
-        val user = auth.currentUser
+        val user = mAuth.currentUser
         return if (user != null) {
             user.displayName
         } else ANONYMOUS
@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onImageSelected(uri: Uri) {
         Log.d(TAG, "Uri: $uri")
-        val user = auth.currentUser
+        val user = mAuth.currentUser
         val tempMessage = FriendlyMessage(null, getUserName(), getPhotoUrl(), LOADING_IMAGE_URL)
         db.reference
             .child(MESSAGES_CHILD)
