@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        if (BuildConfig.DEBUG) {
-//            Firebase.database.useEmulator("10.0.2.2", 9000)
-//            Firebase.auth.useEmulator("10.0.2.2", 9099)
-//            Firebase.storage.useEmulator("10.0.2.2", 9199)
-//        }
+        if (!BuildConfig.DEBUG) {
+            Firebase.database.useEmulator("10.0.2.2", 9000)
+            Firebase.auth.useEmulator("10.0.2.2", 9099)
+            Firebase.storage.useEmulator("10.0.2.2", 9199)
+        }
 
 
         // Initialize Firebase Auth and check if the user is signed in
