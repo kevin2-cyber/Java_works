@@ -1,6 +1,6 @@
 package com.codelab.buildandroid
 
-import androidx.test.platform.app.InstrumentationRegistry
+
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,6 +14,11 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+    }
+
+    @Test
+    fun subtraction_isCorrect() {
+        assertEquals(8,12 - 4)
     }
 
 }
