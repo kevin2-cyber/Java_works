@@ -9,4 +9,5 @@ fun main() {
     println(name.length)
     println(person.getName())
     println(person.getAge())
+    println(man.addProp())
 }

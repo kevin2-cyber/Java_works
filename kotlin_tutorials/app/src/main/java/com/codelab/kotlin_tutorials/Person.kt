@@ -6,7 +6,11 @@ open class Person(private val name: String, private val age: Int) {
         return name
     }
 
-    open fun getAge(): Int {
-        return age
+    open fun getAge(): String {
+        return age.toString()
+    }
+
+    open fun addProp(): String {
+        return getName() + " " + getAge()
     }
 }

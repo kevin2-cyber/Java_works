@@ -1,13 +1,17 @@
 package com.codelab.kotlin_tutorials
 
-class Man(name: String, age: Int) : Person(
+open class Man(name: String, age: Int) : Person(
     name, age
 ) {
    override fun getName(): String {
-        return "My name is " + getName()
+        return "My name is " + super.getName() + "."
     }
 
-    override fun getAge(): Int {
-        return getAge()
+    override fun getAge(): String {
+        return "\nI'm " + super.getAge() + " years old"
+    }
+
+    override fun addProp(): String {
+        return super.addProp() + "."
     }
 }
