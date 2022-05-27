@@ -24,4 +24,8 @@ abstract class Human {
     public int lengthOfLegs() {
         return legs.length();
     }
+
+    public int lengthOfBoth() {
+        return hands.length() + legs.length();
+    }
 }
