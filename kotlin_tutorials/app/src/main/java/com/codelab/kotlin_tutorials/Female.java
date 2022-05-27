@@ -1,20 +1,22 @@
 package com.codelab.kotlin_tutorials;
 
 public class Female extends Human{
-    private String hands;
-    private String legs;
+
 
     public Female(String hands, String legs) {
-        super(hands = hands ,legs = legs);
-//        this.hands = hands;
-//        this.legs = legs;
+        super(hands, legs);
+
     }
 
     public int lengthOfHands() {
-        return hands.length();
+        return super.getHands().length();
     }
 
     public int lengthOfLegs() {
-        return legs.length();
+        return super.getLegs().length();
+    }
+
+    public int lengthOfBoth() {
+        return super.getHands().length() + super.getLegs().length();
     }
 }
