@@ -31,7 +31,8 @@
         android:background="#30ffffff"
         android:drawableStart="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="15dp"
-        tools:ignore="HardcodedText,TextFields" />
+        tools:ignore="HardcodedText,TextFields"
+        android:autofillHints="Username" />
 
     <EditText
         android:layout_width="match_parent"
@@ -47,7 +48,8 @@
         android:drawableStart="@drawable/ic_baseline_info_24"
         android:drawablePadding="15dp"
         android:inputType="textPassword"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:autofillHints="Password" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
@@ -91,23 +93,31 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="15dp"
-            android:src="@drawable/google"/>
+            android:src="@drawable/google"
+            android:contentDescription="Google"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="15dp"
-            android:src="@drawable/fb"/>
+            android:src="@drawable/fb"
+            android:contentDescription="Facebook"
+            tools:ignore="HardcodedText" />
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="15dp"
-            android:src="@drawable/twitter"/>
+            android:src="@drawable/twitter"
+            android:contentDescription="Twitter"
+            tools:ignore="HardcodedText" />
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="15dp"
-            android:src="@drawable/github"/>
+            android:src="@drawable/github"
+            android:contentDescription="Github"
+            tools:ignore="HardcodedText" />
         
         
     </LinearLayout>
