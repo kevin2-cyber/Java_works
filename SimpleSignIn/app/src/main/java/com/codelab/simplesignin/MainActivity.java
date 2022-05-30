@@ -2,6 +2,7 @@ package com.codelab.simplesignin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton loginBtn = findViewById(R.id.loginbtn);
 
         loginBtn.setOnClickListener(
-                v -> {
+                view -> {
                     if (username.getText().toString().equals("admin") && password.getText().toString().equals("password")) {
+                        startActivity(new Intent(this, WelcomeActivity.class));
                         Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
