@@ -1,12 +1,18 @@
 package com.codelab.simplesignin;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.codelab.simplesignin.databinding.ActivityMainBinding;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -17,7 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
+        Glide.with(getApplicationContext()).load(R.drawable.google)
+                .apply(bitmapTransform(new BlurTransformation(2)))
+                .into((ImageView) findViewById(R.id.google));
 
+        Glide.with(getApplicationContext()).load(R.drawable.fb)
+                .apply(bitmapTransform(new BlurTransformation(2)))
+                .into((ImageView) findViewById(R.id.fb));
+
+        Glide.with(getApplicationContext()).load(R.drawable.twitter)
+                .apply(bitmapTransform(new BlurTransformation(2)))
+                .into((ImageView) findViewById(R.id.twitter));
+
+        Glide.with(getApplicationContext()).load(R.drawable.github)
+                .apply(bitmapTransform(new BlurTransformation(2)))
+                .into((ImageView) findViewById(R.id.github));
 
         binding.loginbtn.setOnClickListener(
                 view -> {
