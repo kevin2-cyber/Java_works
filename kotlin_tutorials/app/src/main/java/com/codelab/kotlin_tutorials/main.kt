@@ -1,6 +1,6 @@
 package com.codelab.kotlin_tutorials
 
-fun main() {
+/*fun main() {
     /*
     // mutable variables
     var name = "Baidoo"
@@ -225,6 +225,7 @@ fun main() {
     println("the result is $average")
 */
 }
+ */
 
 /*
 // Method - a Method is a function within a class
