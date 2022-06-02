@@ -97,4 +97,15 @@ fun main() {
         println("You are too young")
     }
 
+    if (name == "Eduful") {
+        println("Welcome home Kelvin")
+    } else {
+        println("Who are you")
+    }
+
+    var isRainy = true
+    if (isRainy) {
+        println("It's rainy")
+    }
+
 }
