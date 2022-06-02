@@ -108,4 +108,41 @@ fun main() {
 //        println("It's rainy")
 //    }
 
+    var season = 3
+    when(season) {
+        1 -> println("Spring")
+        2 -> println("Summer")
+        3 -> {
+            println("Fall")
+            println("Autumn")
+        }
+        4 -> println("Winter")
+        else -> println("Invalid Season")
+    }
+
+    var month = 3
+    when(month){
+        in 3..5 -> println("Spring")
+        in 6..8 -> println("Summer")
+        in 9..11 -> println("Fall")
+        12, 1, 2 -> println("Winter")
+        else -> println("Invalid season")
+    }
+
+    var age = 17
+    when(age){
+        in 21..150 -> println("now You may drink in the US")
+        in 18..20 -> println("You may vote now")
+        16,17 -> println("You may drive now")
+        else -> println("You are too young")
+    }
+
+    var xml: Any = 13.37F
+    when(xml){
+        is Int -> println("$xml is an Int")
+        is Double -> println("$xml is a Double")
+        is String -> println("$xml is a String")
+        else -> println("$xml is none of the above")
+    }
+
 }
