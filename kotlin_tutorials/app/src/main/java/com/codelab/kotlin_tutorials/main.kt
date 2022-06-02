@@ -78,34 +78,34 @@ fun main() {
     val heightPerson1 = 170
     val heightPerson2 = 189
 
-    if (heightPerson1 > heightPerson2) {
-        println("use raw force")
-    } else if (heightPerson1 == heightPerson2){
-        println("Use your power technique 1337")
-    }else {
-        println("use technique")
-    }
-
-    var age = 17
-    if (age >= 21) {
-        println(" now you may drink in the US")
-    } else if (age >= 18) {
-        println("you may vote now")
-    } else if (age >= 16) {
-        println("you may drive now")
-    } else {
-        println("You are too young")
-    }
-
-    if (name == "Eduful") {
-        println("Welcome home Kelvin")
-    } else {
-        println("Who are you")
-    }
-
-    var isRainy = true
-    if (isRainy) {
-        println("It's rainy")
-    }
+//    if (heightPerson1 > heightPerson2) {
+//        println("use raw force")
+//    } else if (heightPerson1 == heightPerson2){
+//        println("Use your power technique 1337")
+//    }else {
+//        println("use technique")
+//    }
+//
+//    var age = 17
+//    if (age >= 21) {
+//        // println(" now you may drink in the US")
+//    } else if (age >= 18) {
+//       // println("you may vote now")
+//    } else if (age >= 16) {
+//        // println("you may drive now")
+//    } else {
+//        // println("You are too young")
+//    }
+//
+//    if (name == "Eduful") {
+//        // println("Welcome home Kelvin")
+//    } else {
+//        // println("Who are you")
+//    }
+//
+//    var isRainy = true
+//    if (isRainy) {
+//        println("It's rainy")
+//    }
 
 }
