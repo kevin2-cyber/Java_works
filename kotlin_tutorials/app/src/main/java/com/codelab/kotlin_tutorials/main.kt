@@ -24,5 +24,10 @@ fun main() {
     val float: Float = 13.37F
     // Double (64 bit)
     val double: Double = 3.14159265358979323846
-    print("Hello $myName $name")
+
+    // Booleans is used to represent logical values
+    // It can have two possible values true and false
+    var isSunny: Boolean = true
+    isSunny = false
+
 }
