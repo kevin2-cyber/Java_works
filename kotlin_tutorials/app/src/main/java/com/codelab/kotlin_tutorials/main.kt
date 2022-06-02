@@ -55,12 +55,23 @@ fun main() {
     // println("isEqual is $isEqual")
 
     val isNotEqual = 5 != 5
-    println("isNotEqual is $isNotEqual")
+    // println("isNotEqual is $isNotEqual")
 
-    println("is5greater3 ${5 > 3}")
-    println("is-5greater3 ${-5 > 3}")
-    println("is5LowerEqual3 ${5 <= 3}")
-    println("is5GreaterEqual3 ${5 >= 3}")
+//    println("is5greater3 ${5 > 3}")
+//    println("is-5greater3 ${-5 > 3}")
+//    println("is5LowerEqual3 ${5 <= 3}")
+//    println("is5GreaterEqual3 ${5 >= 3}")
 
+    // Assignment operators (+=, -=, *=, /=, %=)
+    var myNum = 5
+    myNum += 3
+    myNum *= 4
+    println("myNum is $myNum")
 
+    // Increment & Decrement operators (++, --)
+    myNum++
+    println("myNum is $myNum")
+    println("myNum is ${myNum++}")
+    println("myNum is ${++myNum}")
+    println("myNum is ${--myNum}")
 }
