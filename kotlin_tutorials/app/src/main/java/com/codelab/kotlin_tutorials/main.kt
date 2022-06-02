@@ -160,4 +160,11 @@ fun main() {
 //    }
 //    println("While loop is done")
 
+    var x = 1
+    do {
+        print(x)
+        x++
+    }while (x <= 10)
+    println("\ndo while loop is done")
+
 }
