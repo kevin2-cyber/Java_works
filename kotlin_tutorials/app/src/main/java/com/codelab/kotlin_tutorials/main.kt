@@ -66,12 +66,23 @@ fun main() {
     var myNum = 5
     myNum += 3
     myNum *= 4
-    println("myNum is $myNum")
+    // println("myNum is $myNum")
 
     // Increment & Decrement operators (++, --)
     myNum++
-    println("myNum is $myNum")
-    println("myNum is ${myNum++}")
-    println("myNum is ${++myNum}")
-    println("myNum is ${--myNum}")
+    // println("myNum is $myNum")
+    // println("myNum is ${myNum++}")
+    // println("myNum is ${++myNum}")
+    // println("myNum is ${--myNum}")
+
+    var heightPerson1 = 170
+    var heightPerson2 = 189
+
+    if (heightPerson1 > heightPerson2) {
+        println("use raw force")
+    } else if (heightPerson1 == heightPerson2){
+        println("Use your power technique 1337")
+    }else {
+        println("use technique")
+    }
 }
