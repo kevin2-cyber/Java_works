@@ -146,18 +146,18 @@ fun main() {
 //    }
 
     // While loop executes a block of code repeatedly as long as a given condition is true
-    var x = 1
-    while (x <= 10) {
-        print(x)
-        x++
-    }
-    println("\nWhile loop is done")
-
-    var xml = 100
-    while (xml >= 0) {
-        println(xml)
-        xml -=2
-    }
-    println("While loop is done")
+//    var x = 1
+//    while (x <= 10) {
+//        print(x)
+//        x++
+//    }
+//    println("\nWhile loop is done")
+//
+//    var xml = 100
+//    while (xml >= 0) {
+//        println(xml)
+//        xml -=2
+//    }
+//    println("While loop is done")
 
 }
