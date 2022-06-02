@@ -30,4 +30,8 @@ fun main() {
     var isSunny: Boolean = true
     isSunny = false
 
+    // Characters
+    val letterChar = 'A'
+    val digitChar = '1'
+
 }
