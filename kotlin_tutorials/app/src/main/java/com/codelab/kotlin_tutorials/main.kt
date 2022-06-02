@@ -40,6 +40,15 @@ fun main() {
     val firstCharInStr = myStr[0]
     val lastCharInStr = myStr[myStr.length - 1]
 
-    print("first character is $firstCharInStr and the length of myStr is ${myStr.length}")
+   // print("first character is $firstCharInStr and the length of myStr is ${myStr.length}")
+
+    // Arithmetic operators (+, -, *, /, %)
+    var result = 5 + 3
+    val a = 5.0
+    val b = 3
+    var resultDouble: Double
+    resultDouble = a / b
+    print(resultDouble)
+
 
 }
