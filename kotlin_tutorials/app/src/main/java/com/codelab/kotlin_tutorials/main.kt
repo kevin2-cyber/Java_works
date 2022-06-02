@@ -7,7 +7,7 @@ fun main() {
     // immutable variables
     val myName = "Kelvin"
 
-    // type inference
+    // type inference finds out the type from context
     var myAge = 31
 
     // Integer types
