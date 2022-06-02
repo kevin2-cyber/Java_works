@@ -21,7 +21,7 @@ fun main() {
 
     // Floating Point number Types
     // Float (32 bit)
-    val float: Float = 13.37
+    val float: Float = 13.37F
     // Double (64 bit)
     val double: Double = 3.14159265358979323846
     print("Hello $myName $name")
