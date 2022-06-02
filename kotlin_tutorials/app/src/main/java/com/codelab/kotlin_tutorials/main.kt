@@ -160,21 +160,37 @@ fun main() {
 //    }
 //    println("While loop is done")
 
-    var x = 1
-    do {
-        print(x)
-        x++
-    }while (x <= 10)
-    println("\ndo while loop is done")
+//    var x = 1
+//    do {
+//        print(x)
+//        x++
+//    }while (x <= 10)
+//    println("\ndo while loop is done")
+//
+//    var feltTemp = "cold"
+//    var roomTemp = 10
+//    while (feltTemp == "cold"){
+//        roomTemp++
+//        if (roomTemp >= 20) {
+//            feltTemp = "comfy"
+//            println("it's comfy now")
+//        }
+//    }
 
-    var feltTemp = "cold"
-    var roomTemp = 10
-    while (feltTemp == "cold"){
-        roomTemp++
-        if (roomTemp >= 20) {
-            feltTemp = "comfy"
-            println("it's comfy now")
-        }
+    for (num in 1..10){
+        println(num)
+    }
+
+    for (i in 1 until 10){ // Same as for (i in 1.until(10)
+        print("$i ")
+    }
+
+    for (i in 10 downTo 1 step 2){ // Same as for (i in 10.downTo(1).step(2))
+        print("$i ")
+    }
+
+    for (i in 10.downTo(1).step(2)) {
+        print("$i ")
     }
 
 }
