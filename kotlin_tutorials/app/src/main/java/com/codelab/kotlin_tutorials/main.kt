@@ -196,7 +196,7 @@ fun main() {
 
      */
 
-    // Break and continue
+    /* // Break and continue
     for (i in 1 until 20){
         print("$i ")
         if (i/2 == 5){
@@ -213,4 +213,30 @@ fun main() {
         print("$i ")
     }
     print("Done with the loop")
+
+     */
+
+
+    // argument
+    var result = addUp(5,3)
+    println("result is $result")
+
+    var average = average(5.0,6.0)
+    println("the result is $average")
+
+}
+
+// Method - a Method is a function within a class
+// Parameter (input)
+fun addUp(a: Int, b: Int): Int {
+    // output
+    return a + b
+}
+
+fun average(num1: Double, num2: Double): Double {
+    return (num1 + num2) / 2
+}
+
+fun myFunction(){
+    print("Called from myFunction")
 }
