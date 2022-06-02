@@ -34,4 +34,12 @@ fun main() {
     val letterChar = 'A'
     val digitChar = '1'
 
+    // Strings
+    val myStr = "Hello World"
+    var firstCharInStr = myStr[0]
+    var lastCharInStr = myStr[myStr.length - 1]
+
+    print("first character is " + firstCharInStr)
+    print(" last character is " + lastCharInStr)
+
 }
