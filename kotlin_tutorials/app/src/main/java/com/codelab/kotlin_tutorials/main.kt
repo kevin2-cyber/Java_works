@@ -216,16 +216,17 @@ fun main() {
 
      */
 
-
+/*
     // argument
     var result = addUp(5,3)
     println("result is $result")
 
     var average = average(5.0,6.0)
     println("the result is $average")
-
+*/
 }
 
+/*
 // Method - a Method is a function within a class
 // Parameter (input)
 fun addUp(a: Int, b: Int): Int {
@@ -240,3 +241,4 @@ fun average(num1: Double, num2: Double): Double {
 fun myFunction(){
     print("Called from myFunction")
 }
+ */
