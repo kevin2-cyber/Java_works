@@ -16,10 +16,11 @@ fun main() {
     // var iPhone = MobilePhone("iOS", "Apple", "13 Pro Max")
     // var nokia = MobilePhone("Android", "Nokia", "Nokia Lumia")
     */
-
+    var myCar = Car()
+    myCar.owner
 }
 
-class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
+/*class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
     // Member variables - Properties
     var age: Int? = null
     var hobby: String = "watch Netflix"
@@ -46,12 +47,18 @@ class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
         }
 
 }
+ */
 
-class MobilePhone (osName: String, brand: String, model: String) {
+/*class MobilePhone (osName: String, brand: String, model: String) {
 
     init {
         println("OS name is $osName" +
                 "\nbrand is $brand" +
                 "\nmodel is $model")
     }
+}
+ */
+
+class Car() {
+    lateinit var owner: String
 }
