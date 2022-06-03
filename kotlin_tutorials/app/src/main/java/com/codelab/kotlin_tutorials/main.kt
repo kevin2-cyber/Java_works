@@ -1,5 +1,7 @@
 package com.codelab.kotlin_tutorials
 
+import java.util.*
+
 
 /*fun main() {
     /*
@@ -245,7 +247,7 @@ fun myFunction(){
 }
  */
 
-fun main() {
+/*fun main() {
 
     val name: String = "Kelvin"
     // name = null -> Compilation ERROR
@@ -265,4 +267,24 @@ fun main() {
 
 
 
+}
+ */
+
+fun main() {
+
+    var nullableName: String? = "Kelvin"
+    //nullableName = null
+
+    var len = nullableName?.length
+    println(nullableName?.length)
+
+    // ?: Elvis operator
+    val name = nullableName?: "Guest"
+    println("name = $name")
+
+    // converts a nullable type to a non-nullable type and throws a NullPointerException when it holds a null value
+    println(nullableName!!.lowercase())
+
+    // You can perform a chain safe calls
+    // val wifesAge: String? = (user?.wife?.age ?: 0) as String?
 }
