@@ -18,11 +18,12 @@ fun main() {
     // var iPhone = MobilePhone("iOS", "Apple", "13 Pro Max")
     // var nokia = MobilePhone("Android", "Nokia", "Nokia Lumia")
     */
-    var myCar = Car()
+    /*var myCar = Car()
     println("brand is : ${myCar.myBrand}")
     myCar.maxSpeed = 200
     println("MaxSpeed is : ${myCar.maxSpeed}")
     println("Model is : ${myCar.myModel}")
+     */
 }
 
 /*class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
@@ -64,7 +65,7 @@ fun main() {
 }
  */
 
-class Car() {
+/*class Car() {
     lateinit var owner: String
 
     val myBrand: String = "BMW"
@@ -85,3 +86,4 @@ class Car() {
         this.owner = "Frank"
     }
 }
+ */
