@@ -2,7 +2,7 @@ package com.codelab.kotlinoop
 
 // import java.lang.IllegalArgumentException
 
-data class User(val id: Long, var name: String)
+// data class User(val id: Long, var name: String)
 
 fun main() {
    /*// Creating instances of classes
@@ -26,7 +26,7 @@ fun main() {
     println("MaxSpeed is : ${myCar.maxSpeed}")
     println("Model is : ${myCar.myModel}")
      */
-    val user1 = User(1," Denis")
+    /*val user1 = User(1," Denis")
     // val name = user1.name
     // println(name)
     user1.name = "Michael"
@@ -45,6 +45,7 @@ fun main() {
 
     val (id,name) = updatedUser
     println("id=$id name=$name")
+     */
 }
 
 /*class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
