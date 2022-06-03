@@ -1,5 +1,7 @@
 package com.codelab.kotlinoop
 
+import java.lang.IllegalArgumentException
+
 fun main() {
    /*// Creating instances of classes
     var kevin = Person("Kelvin", "Eduful", 31)
@@ -17,7 +19,10 @@ fun main() {
     // var nokia = MobilePhone("Android", "Nokia", "Nokia Lumia")
     */
     var myCar = Car()
-    myCar.owner
+    println("brand is : ${myCar.myBrand}")
+    myCar.maxSpeed = 200
+    println("MaxSpeed is : ${myCar.maxSpeed}")
+    println("Model is : ${myCar.myModel}")
 }
 
 /*class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
@@ -61,4 +66,22 @@ fun main() {
 
 class Car() {
     lateinit var owner: String
+
+    val myBrand: String = "BMW"
+    // Custom getter
+    get() {
+        return field.lowercase()
+    }
+
+    var maxSpeed: Int = 250
+    get() = field
+    set(value) {
+        field = if (value > 0) value else throw IllegalArgumentException("MaxSpeed cannot be less than 0")
+    }
+
+    var myModel: String = "M5"
+    private set
+    init {
+        this.owner = "Frank"
+    }
 }
