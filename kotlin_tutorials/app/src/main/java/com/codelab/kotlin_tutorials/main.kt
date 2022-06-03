@@ -1,5 +1,6 @@
 package com.codelab.kotlin_tutorials
 
+
 /*fun main() {
     /*
     // mutable variables
@@ -246,14 +247,13 @@ fun myFunction(){
 
 fun main() {
 
-    var name: String = "Kelvin"
+    val name: String = "Kelvin"
     // name = null -> Compilation ERROR
     var nullableName: String? = "Kelvin"
-    //nullableName = null
+    nullableName = null
 
     var len = name.length
     var len2 = nullableName?.length
-    println(nullableName?.lowercase())
     nullableName?.let { println(it.length) }
 
 //    // old-fashioned way
