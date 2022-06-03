@@ -1,7 +1,7 @@
 package com.codelab.kotlinoop
 
 fun main() {
-    // Creating instances of classes
+   /*// Creating instances of classes
     var kevin = Person("Kelvin", "Eduful", 31)
     // var john = Person()
     // var johnPeterson = Person(lastName = "Peterson")
@@ -15,6 +15,8 @@ fun main() {
     // var samsung = MobilePhone("Android", "Samsung", "Galaxy S20 Ultra")
     // var iPhone = MobilePhone("iOS", "Apple", "13 Pro Max")
     // var nokia = MobilePhone("Android", "Nokia", "Nokia Lumia")
+    */
+
 }
 
 class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
