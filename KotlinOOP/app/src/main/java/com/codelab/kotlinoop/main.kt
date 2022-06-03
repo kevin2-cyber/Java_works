@@ -1,6 +1,6 @@
 package com.codelab.kotlinoop
 
-// import java.lang.IllegalArgumentException
+/*// import java.lang.IllegalArgumentException
 
 // data class User(val id: Long, var name: String)
 
@@ -47,6 +47,7 @@ fun main() {
     println("id=$id name=$name")
      */
 }
+ */
 
 /*class Person (firstName: String = "Kelvin", lastName: String = "Eduful") {
     // Member variables - Properties
