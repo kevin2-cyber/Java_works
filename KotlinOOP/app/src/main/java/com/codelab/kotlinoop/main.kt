@@ -110,3 +110,18 @@ fun main() {
     }
 }
  */
+
+// The Class that inherits the features of another
+// class is called the Sub class or Child or
+// Derived class, and the class whose features are
+// inherited is called the Super class or Parent class
+// or Base class.
+fun main() {
+    var audiA3 = Car("A3","Audi")
+    var teslaS = ElectricCar("S-Model", "Tesla", 85.0)
+
+    teslaS.extendRange(200.0)
+    teslaS.drive()
+    audiA3.drive(200.0)
+    teslaS.drive(200.0)
+}
