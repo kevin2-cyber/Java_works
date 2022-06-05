@@ -21,6 +21,7 @@ open class Car(val name: String, val brand: String) {
 class ElectricCar(name: String, brand: String, batteryLife: Double)
     : Car(name, brand) {
 
+    var chargerType = "Type1"
     override var range = batteryLife * 6
 
     override fun drive(distance: Double) {

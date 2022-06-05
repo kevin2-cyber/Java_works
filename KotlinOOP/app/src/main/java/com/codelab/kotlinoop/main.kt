@@ -120,8 +120,11 @@ fun main() {
     var audiA3 = Car("A3","Audi")
     var teslaS = ElectricCar("S-Model", "Tesla", 85.0)
 
+    teslaS.chargerType = "Type2"
     teslaS.extendRange(200.0)
     teslaS.drive()
+
+    // Polymorphism
     audiA3.drive(200.0)
     teslaS.drive(200.0)
 }
