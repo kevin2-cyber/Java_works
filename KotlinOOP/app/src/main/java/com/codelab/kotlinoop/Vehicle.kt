@@ -5,7 +5,9 @@ open class Vehicle {
     // methods
 }
 
-open class Car(val name: String, val brand: String) {
+open class Car(override val maxSpeed: Double,
+               val name: String,
+               val brand: String) : Drivable{
     open var range: Double = 0.0
 
     fun extendRange(amount: Double) {
@@ -16,10 +18,20 @@ open class Car(val name: String, val brand: String) {
     open fun drive(distance: Double) {
         println("Drove for $distance Km")
     }
+
+    // override fun drive(): String = "driving the interface drive"
+    override fun drive(): String {
+        return "driving the interface drive"
+    }
 }
 
-class ElectricCar(name: String, brand: String, batteryLife: Double)
-    : Car(name, brand) {
+class ElectricCar(maxSpeed: Double,
+                  name: String,
+                  brand: String,
+                  batteryLife: Double)
+    : Car(maxSpeed,
+    name,
+    brand) {
 
     var chargerType = "Type1"
     override var range = batteryLife * 6
@@ -28,7 +40,12 @@ class ElectricCar(name: String, brand: String, batteryLife: Double)
         println("Drove for $distance Km on electricity")
     }
 
-    fun drive() {
-        println("Drove for $range Km on electricity")
+    override fun drive():String {
+        return "Drove for $range Km on electricity"
+    }
+
+    override fun brake() {
+        super.brake()
+        println("brake inside of the electric car")
     }
 }

@@ -117,14 +117,16 @@ fun main() {
 // inherited is called the Super class or Parent class
 // or Base class.
 fun main() {
-    var audiA3 = Car("A3","Audi")
-    var teslaS = ElectricCar("S-Model", "Tesla", 85.0)
+    var audiA3 = Car(200.0,"A3","Audi")
+    var teslaS = ElectricCar(240.0,"S-Model", "Tesla", 85.0)
 
     teslaS.chargerType = "Type2"
-    teslaS.extendRange(200.0)
-    teslaS.drive()
+    // teslaS.extendRange(200.0)
+    // teslaS.drive()
+    teslaS.brake()
+    audiA3.brake()
 
     // Polymorphism
-    audiA3.drive(200.0)
-    teslaS.drive(200.0)
+    // audiA3.drive(200.0)
+    // teslaS.drive(200.0)
 }
