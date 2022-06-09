@@ -8,9 +8,9 @@ class UserUnitTest {
 
     private val first = "Alice"
     private val last = "Simmons"
-    private val user = JavaUser(first, last)
-    private val userSame = JavaUser(first, last)
-    private val userDifferent = JavaUser("Alex", "Smith")
+    private val user = KotlinUser(first, last)
+    private val userSame = KotlinUser(first, last)
+    private val userDifferent = KotlinUser("Alex", "Smith")
 
     @Test
     fun readProperties() {
