@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.codelab.ageinminutes.databinding.ActivityMainBinding
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,14 +26,25 @@ class MainActivity : AppCompatActivity() {
         // supportActionBar?.hide()
     }
 
-    fun clickDatePicker(view: View) {
-        val myCalendar = Calendar.getInstance()
-        val year = myCalendar.get(Calendar.YEAR)
-        val month = myCalendar.get(Calendar.MONTH)
-        val day = myCalendar.get(Calendar.DAY_OF_MONTH)
-        DatePickerDialog(this, DatePickerDialog.OnDateSetListener {
-                view, year, month, dayOfMonth ->
-            Toast.makeText(this, "DatePicker works", Toast.LENGTH_LONG).show()
+    private fun clickDatePicker(view: View) {
+        val myCalendar: Calendar = Calendar.getInstance()
+        val year: Int = myCalendar.get(Calendar.YEAR)
+        val month: Int = myCalendar.get(Calendar.MONTH)
+        val day: Int = myCalendar.get(Calendar.DAY_OF_MONTH)
+        DatePickerDialog(this, // DatePickerDialog.OnDateSetListener
+        {
+                _, selectedYear, selectedMonth, selectedDayOfMonth ->
+            Toast.makeText(this,
+                "The chosen year is $selectedYear, the month is $selectedMonth and the day is $selectedDayOfMonth",
+                Toast.LENGTH_LONG).show()
+
+            val selectedDate = "$selectedDayOfMonth/${selectedMonth + 1}/$selectedYear"
+
+            binding.tvSelectedDate.text = selectedDate
+
+            val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+
+            val theDate = sdf.parse(selectedDate)
         }
             ,year
             ,month

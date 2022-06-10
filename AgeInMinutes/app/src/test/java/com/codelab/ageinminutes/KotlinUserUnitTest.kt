@@ -4,7 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Test
 
-class UserUnitTest {
+class KotlinUserUnitTest {
 
     private val first = "Alice"
     private val last = "Simmons"
