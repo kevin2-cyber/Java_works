@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // supportActionBar?.hide()
+        supportActionBar?.hide()
     }
 
     private fun clickDatePicker(view: View) {
