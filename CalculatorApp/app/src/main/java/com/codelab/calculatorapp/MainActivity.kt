@@ -3,15 +3,24 @@ package com.codelab.calculatorapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import android.widget.Button
+import com.codelab.calculatorapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
     }
 
     fun onDigit(view: View) {
-        Toast.makeText(this, "Button clicked", Toast.LENGTH_LONG).show()
+        binding.tvInput.append((view as Button).text)
+    }
+
+    fun onClear(view: View) {
+        binding.tvInput.text = ""
     }
 }
