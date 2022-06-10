@@ -9,6 +9,8 @@ import com.codelab.calculatorapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    var lastNumeric: Boolean = false
+    var lastDot: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -18,9 +20,19 @@ class MainActivity : AppCompatActivity() {
 
     fun onDigit(view: View) {
         binding.tvInput.append((view as Button).text)
+        lastNumeric = true
+        lastDot = false
     }
 
     fun onClear(view: View) {
         binding.tvInput.text = ""
+    }
+
+    fun onDecimalPoint(view: View) {
+        if (lastNumeric && !lastDot){
+            binding.tvInput.append(".")
+            lastNumeric = false
+            lastDot = true
+        }
     }
 }

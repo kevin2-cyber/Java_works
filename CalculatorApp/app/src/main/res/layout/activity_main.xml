@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,7 @@
     <TextView
         android:id="@+id/tvInput"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:background="@color/lightGrey"
         android:padding="10dp"
         android:textSize="48sp"
@@ -29,6 +28,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:onClick="onDigit"
+            android:background="@drawable/round_style"
             android:text="@string/_7"
             tools:ignore="NestedWeights" />
 
@@ -38,8 +38,9 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_8"
-            android:onClick="onDigit"/>
+            android:onClick="onDigit" />
 
         <Button
             android:id="@+id/btnNine"
@@ -47,8 +48,9 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_9"
-            android:onClick="onDigit"/>
+            android:onClick="onDigit" />
 
         <Button
             android:id="@+id/btnDivide"
@@ -56,7 +58,8 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="@string/_Divide"
+            android:background="@drawable/round_style"
+            android:text="@string/divide"
             android:onClick="onDigit" />
 
     </LinearLayout>
@@ -74,6 +77,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:onClick="onDigit"
+            android:background="@drawable/round_style"
             android:text="@string/_4"
             tools:ignore="NestedWeights" />
 
@@ -83,6 +87,7 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_5"
             android:onClick="onDigit" />
 
@@ -92,8 +97,9 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_6"
-            android:onClick="onDigit"/>
+            android:onClick="onDigit" />
 
         <Button
             android:id="@+id/btnMultiply"
@@ -101,8 +107,9 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="@string/_Multiply"
-            android:onClick="onDigit"/>
+            android:background="@drawable/round_style"
+            android:text="@string/multiply"
+            android:onClick="onDigit" />
 
     </LinearLayout>
 
@@ -119,6 +126,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:onClick="onDigit"
+            android:background="@drawable/round_style"
             android:text="@string/_1"
             tools:ignore="NestedWeights" />
 
@@ -128,6 +136,7 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_2"
             android:onClick="onDigit" />
 
@@ -137,8 +146,9 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="@drawable/round_style"
             android:text="@string/_3"
-            android:onClick="onDigit"/>
+            android:onClick="onDigit" />
 
         <Button
             android:id="@+id/btnSubtract"
@@ -146,7 +156,8 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="@string/_Minus"
+            android:background="@drawable/round_style"
+            android:text="@string/minus"
             android:onClick="onDigit" />
 
     </LinearLayout>
@@ -158,14 +169,23 @@
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:onClick="onDecimalPoint"
+            android:text="@string/dot"
+            tools:ignore="NestedWeights" />
+
+        <Button
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="2"
             android:onClick="onDigit"
-            android:text="@string/_0"
-            tools:ignore="HardcodedText,NestedWeights" />
+            android:text="@string/_0" />
 
         <Button
             android:id="@+id/btnCLR"
@@ -174,7 +194,7 @@
             android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="@string/clr"
-            android:onClick="onClear"/>
+            android:onClick="onClear" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -182,7 +202,7 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="@string/_plus"
+            android:text="@string/plus"
             android:onClick="onDigit" />
 
 
