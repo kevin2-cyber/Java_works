@@ -220,7 +220,7 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="2"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:text="@string/equal"
             tools:ignore="NestedWeights" />
 
