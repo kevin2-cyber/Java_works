@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@color/colorPrimary"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
