@@ -13,7 +13,7 @@ import kevin.codelab.quizapp.databinding.ActivityQuizQuestionsBinding
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
-    private var mSelectedOption: Int = 0
+    private var mSelectedOptionPosition: Int = 0
 
 
     private lateinit var binding: ActivityQuizQuestionsBinding
@@ -35,6 +35,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
 
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
+        defaultOptionsView()
 
         val question: Question = mQuestionsList!![mCurrentPosition - 1]
         binding.progressBar.progress = mCurrentPosition
@@ -70,7 +71,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
 
         for (option in options) {
             // option.setTextColor(Color.parseColor(R.color.grey.toString()))
-            option.setTextColor(Color.parseColor(R.color.red.toString()))
+            option.setTextColor(Color.parseColor("#FF0000"))
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
                 this,
@@ -80,10 +81,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
     }
 
     private fun selectedOptionView(tv: TextView, selectedOptionNum: Int){
-        defaultOptionsView()
 
-        mSelectedOption = selectedOptionNum
-        tv.setTextColor(Color.parseColor(R.color.darkGrey.toString()))
+        mSelectedOptionPosition = selectedOptionNum
+        tv.setTextColor(Color.parseColor("#363A43")
         tv.setTypeface(tv.typeface,Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
             this,
@@ -91,36 +91,82 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
         )
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onClick(view: View?) {
         when(view?.id) {
             R.id.tv_option_one -> {
-                binding.tvOptionOne.let {
-                    selectedOptionView(it,1)
-                }
+                selectedOptionView(binding.tvOptionOne,1)
             }
 
             R.id.tv_option_two -> {
-                binding.tvOptionTwo.let {
-                    selectedOptionView(it,2)
-                }
+                selectedOptionView(binding.tvOptionTwo,2)
             }
 
             R.id.tv_option_three -> {
-                binding.tvOptionThree.let {
-                    selectedOptionView(it,3)
-                }
+                selectedOptionView(binding.tvOptionThree,3)
             }
 
             R.id.tv_option_four -> {
-                binding.tvOptionFour.let {
-                    selectedOptionView(it,4)
-                }
+                selectedOptionView(binding.tvOptionFour,4)
             }
 
 
             R.id.btn_submit -> {
-                //TODO: Implement submit button
+                if (mSelectedOptionPosition == 0) {
+                    mCurrentPosition++
+
+                    when{
+                        mCurrentPosition <= mQuestionsList!!.size -> {
+                            setQuestion()
+                        }
+                    }
+                } else {
+                    val questions = mQuestionsList?.get(mCurrentPosition - 1)
+
+                    if (questions!!.correctAnswer != mSelectedOptionPosition) {
+                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    }
+
+                    answerView(questions.correctAnswer, R.drawable.correct_option_border_bg)
+
+                    if (mCurrentPosition == mQuestionsList!!.size) {
+                        binding.btnSubmit.text = "FINISH"
+                    } else {
+                        binding.btnSubmit.text = "GO TO NEXT QUESTION"
+                    }
+
+                    mSelectedOptionPosition = 0
+                }
             }
         }
+    }
+
+    private fun answerView(answer: Int, drawableView: Int) {
+            when(answer) {
+                1 -> {
+                    binding.tvOptionOne.background = ContextCompat.getDrawable(
+                        this,
+                        drawableView
+                    )
+                }
+                2 -> {
+                    binding.tvOptionTwo.background = ContextCompat.getDrawable(
+                        this,
+                        drawableView
+                    )
+                }
+                3 -> {
+                    binding.tvOptionThree.background = ContextCompat.getDrawable(
+                        this,
+                        drawableView
+                    )
+                }
+                4 -> {
+                    binding.tvOptionFour.background = ContextCompat.getDrawable(
+                        this,
+                        drawableView
+                    )
+                }
+            }
     }
 }
