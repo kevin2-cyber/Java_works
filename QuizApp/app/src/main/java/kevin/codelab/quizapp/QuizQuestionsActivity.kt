@@ -33,7 +33,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
         setQuestion()
     }
 
-    @SuppressLint("SetTextI18n")
+
     private fun setQuestion() {
         defaultOptionsView()
 
@@ -83,7 +83,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
     private fun selectedOptionView(tv: TextView, selectedOptionNum: Int){
 
         mSelectedOptionPosition = selectedOptionNum
-        tv.setTextColor(Color.parseColor("#363A43")
+        tv.setTextColor(Color.parseColor("#363A43"))
         tv.setTypeface(tv.typeface,Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
             this,
