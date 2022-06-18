@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import kevin.codelab.quizapp.databinding.ActivityQuizQuestionsBinding
 
@@ -118,6 +119,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
                     when{
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
+                        }
+                        else -> {
+                            Toast.makeText(this,"You made it to the end.",Toast.LENGTH_LONG).show()
                         }
                     }
                 } else {
