@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.drawingView.setSizeForBrush(20.toFloat())
     }
 }
