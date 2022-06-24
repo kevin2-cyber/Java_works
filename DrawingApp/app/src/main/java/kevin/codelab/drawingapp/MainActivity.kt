@@ -4,23 +4,36 @@ import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.core.view.get
 import kevin.codelab.drawingapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     // enabled viewBinding
     private lateinit var binding: ActivityMainBinding
+    private var mImageButtonCurrentPaint: ImageButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        // binding.drawingView.setSizeForBrush(20.toFloat())
+        binding.drawingView.setSizeForBrush(20.toFloat())
 
         binding.ibBrush.setOnClickListener{
             showBrushSizeChooserDialog()
         }
+
+        val linearLayoutPaintColors = findViewById<LinearLayout>(R.id.ll_paint_colors)
+        mImageButtonCurrentPaint = linearLayoutPaintColors[1] as ImageButton
+        mImageButtonCurrentPaint!!.setImageDrawable(
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.pallet_pressed
+            )
+        )
     }
 
     private fun showBrushSizeChooserDialog() {
