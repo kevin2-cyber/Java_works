@@ -29,6 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/drawing_view">
 
         <ImageButton
+            android:id="@+id/ib_skin"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -37,6 +38,7 @@
             android:background="@color/skin"/>
 
         <ImageButton
+            android:id="@+id/ib_black"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -45,6 +47,7 @@
             android:background="@color/black"/>
 
         <ImageButton
+            android:id="@+id/ib_red"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -53,6 +56,7 @@
             android:background="@color/red"/>
 
         <ImageButton
+            android:id="@+id/ib_green"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -61,6 +65,7 @@
             android:background="@color/green"/>
 
         <ImageButton
+            android:id="@+id/ib_blue"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -69,6 +74,7 @@
             android:background="@color/blue"/>
 
         <ImageButton
+            android:id="@+id/ib_yellow"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -77,6 +83,7 @@
             android:background="@color/yellow"/>
 
         <ImageButton
+            android:id="@+id/ib_lollipop"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -85,6 +92,7 @@
             android:background="@color/lollipop"/>
 
         <ImageButton
+            android:id="@+id/ib_random"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="2dp"
@@ -92,6 +100,14 @@
             android:tag="@color/random"
             android:background="@color/random"/>
 
+        <ImageButton
+            android:id="@+id/ib_white"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/white"
+            android:background="@color/white"/>
 
 
 
