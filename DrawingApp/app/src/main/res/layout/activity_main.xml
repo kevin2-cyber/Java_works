@@ -7,15 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <kevin.codelab.drawingapp.DrawingView
-        android:id="@+id/drawing_view"
+    <FrameLayout
+        android:id="@+id/fl_drawing_view_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/background_drawing_view_layout"
+        android:layout_margin="5dp"
+        android:padding="1dp"
+        android:background="@drawable/paris"
         app:layout_constraintBottom_toTopOf="@id/ll_paint_colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <kevin.codelab.drawingapp.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:background="@drawable/background_drawing_view_layout" />
+
+
+    </FrameLayout>
 
 
     <LinearLayout
@@ -26,7 +41,7 @@
         app:layout_constraintBottom_toTopOf="@id/ib_brush"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drawing_view">
+        app:layout_constraintTop_toBottomOf="@+id/fl_drawing_view_container">
 
         <ImageButton
             android:id="@+id/ib_skin"
