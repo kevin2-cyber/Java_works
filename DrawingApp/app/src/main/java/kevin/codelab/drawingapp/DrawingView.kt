@@ -40,9 +40,9 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs){
     }
 
     // Change Canvas to Canvas? if fails
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas!!.drawBitmap(mCanvasBitmap!!, 0f,0f, mCanvasPaint)
+        canvas.drawBitmap(mCanvasBitmap!!, 0f,0f, mCanvasPaint)
 
         for (path in mPaths) {
             mDrawPaint!!.strokeWidth = path.brushThickness
@@ -110,9 +110,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs){
     }
 
     internal inner class CustomPath(var color: Int,
-                                    var brushThickness: Float) : Path() {
-
-    }
+                                    var brushThickness: Float) : Path() {}
 }
 
 
