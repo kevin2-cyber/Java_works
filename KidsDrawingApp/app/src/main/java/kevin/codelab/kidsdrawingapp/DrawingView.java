@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -21,7 +22,7 @@ public class DrawingView extends View {
     private Paint mDrawPaint;
     private Paint mCanvasPaint;
     private double mBrushSize = 0.0;
-    private final int color = Color.BLACK;
+    private int color = Color.BLACK;
     private Canvas canvas;
     private ArrayList<CustomPath> mPaths;
 
@@ -53,8 +54,9 @@ public class DrawingView extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
+    protected void onDraw(@Nullable Canvas canvas) {
         super.onDraw(canvas);
+        assert canvas != null;
         canvas.drawBitmap(mCanvasBitmap,0f,0f, mCanvasPaint);
 
         for (CustomPath path :
@@ -76,17 +78,74 @@ public class DrawingView extends View {
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean onTouchEvent(@Nullable MotionEvent event) {
+        assert event != null;
         float touchX = event.getX();
         float touchY = event.getY();
 
-//        switch (event.getAction()) {
-//            case 1:
-//                MotionEvent.ACTION_DOWN
-//        }
+        switch (event.getAction()) {
+
+            case 1:
+                int actionDown = MotionEvent.ACTION_DOWN;
+                 {
+                     int gtCl = mDrawPath.getColor();
+                     gtCl = color;
+                     float mDBrush = mDrawPath.getBrushThickness();
+                     mDBrush = (float) mBrushSize;
+
+                     mDrawPath.reset();
+                     if (touchX != null) {
+                         if (touchY != null){
+                             mDrawPath.moveTo(touchX,touchY);
+                         }
+                     }
+
+            }
+            break;
+
+            case 2:
+                int actionMove = MotionEvent.ACTION_MOVE;
+            {
+                if (touchX != null) {
+                    if (touchY != null) {
+                        mDrawPath.lineTo(touchX, touchY);
+                    }
+                }
+            }
+            break;
+
+            case 3:
+                int actionUp = MotionEvent.ACTION_UP;
+            {
+                mPaths.add(mDrawPath);
+                mDrawPath = new CustomPath(color, (float) mBrushSize);
+            }
+            break;
+
+            default:
+                return false;
+        }
+
+        invalidate();
 
         return true;
     }
+
+    protected void setSizeForBrush(float newSize) {
+        mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                newSize, getResources().getDisplayMetrics());
+        float strokeWidth = mDrawPaint.getStrokeWidth();
+
+        strokeWidth = (float) mBrushSize;
+    }
+
+    protected void setColor(String newColor){
+        color = Color.parseColor(newColor);
+        int gtColor = mDrawPaint.getColor();
+        gtColor = color;
+    }
+
+
 
     public static final class CustomPath extends Path {
         private int color;
