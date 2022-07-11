@@ -26,7 +26,15 @@ class SleepReceiver : BroadcastReceiver(){
 
         val repository: SleepRepository = (context.applicationContext as MainApplication).repository
 
-        // TODO: Extract sleep information from PendingIntent.
+        if (SleepSegmentEvent.hasEvents(intent)) {
+            val sleepSegmentEvents: List<SleepSegmentEvent> =
+                SleepSegmentEvent.extractEvents(intent)
+            addSleepSegmentEventsToDatabase(repository, sleepSegmentEvents)
+        } else if (SleepClassifyEvent.hasEvents(intent)) {
+            val sleepClassifyEvents: List<SleepClassifyEvent> =
+                SleepClassifyEvent.extractEvents(intent)
+            addSleepClassifyEventsToDatabase(repository, sleepClassifyEvents)
+        }
     }
 
     private fun addSleepSegmentEventsToDatabase(

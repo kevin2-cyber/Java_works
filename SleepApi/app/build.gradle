@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "kevin.codelab.sleepapi"
-        minSdk 21
-        targetSdk 32
+        minSdk 29
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -38,14 +38,15 @@ android {
 
 dependencies {
 
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib: $kotlin_version"
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // Required for new permission APIs
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'androidx.activity:activity:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0-alpha05'
+    implementation 'androidx.activity:activity-ktx:1.6.0-alpha05'
 
     // Room components
     implementation 'androidx.room:room-ktx:2.4.2'
@@ -54,7 +55,7 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:2.4.2"
 
     // DataStore components
-    implementation "androidx.datastore:datastore-preferences-core:1.0.0"
+    implementation "androidx.datastore:datastore-preferences-core:1.0.0-alpha06"
 
     // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"

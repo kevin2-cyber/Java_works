@@ -16,6 +16,7 @@ import kevin.codelab.sleepapi.MainApplication
 import kevin.codelab.sleepapi.data.SleepRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class BootReceiver : BroadcastReceiver(){
@@ -29,7 +30,13 @@ class BootReceiver : BroadcastReceiver(){
         val repository: SleepRepository = (context.applicationContext as MainApplication).repository
 
         scope.launch {
-            //TODO: Request Sleep API upon boot complete
+            val subscribedToSleepData = repository.subscribedToSleepDataFlow.first()
+            if (subscribedToSleepData) {
+                subscribeToSleepSegmentUpdates(
+                    context = context,
+                    pendingIntent = SleepReceiver.createSleepReceiverPendingIntent(context)
+                )
+            }
         }
     }
 

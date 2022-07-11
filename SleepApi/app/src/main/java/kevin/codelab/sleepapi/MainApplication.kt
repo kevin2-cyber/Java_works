@@ -1,6 +1,7 @@
 package kevin.codelab.sleepapi
 
 import android.app.Application
+import androidx.datastore.preferences.createDataStore
 import kevin.codelab.sleepapi.data.SleepRepository
 import kevin.codelab.sleepapi.data.datastore.SLEEP_PREFERENCES_NAME
 import kevin.codelab.sleepapi.data.datastore.SleepSubscriptionStatus
@@ -13,13 +14,13 @@ class MainApplication : Application(){
         SleepDatabase.getDatabase(applicationContext)
     }
 
-    val repository by lazy {
-        SleepRepository(
-            sleepSubscriptionStatus = SleepSubscriptionStatus(
-                applicationContext.createDataStore(name = SLEEP_PREFERENCES_NAME)
-            ),
-            sleepSegmentEventDao = database.sleepSegmentEventDao(),
-            sleepClassifyEventDao = database.sleepClassifyEventDao()
-        )
-    }
+   val repository by lazy {
+       SleepRepository(
+           sleepSubscriptionStatus = SleepSubscriptionStatus(
+               applicationContext.createDataStore(name = SLEEP_PREFERENCES_NAME)
+           ),
+           sleepSegmentEventDao = database.sleepSegmentEventDao(),
+           sleepClassifyEventDao = database.sleepClassifyEventDao()
+       )
+   }
 }
