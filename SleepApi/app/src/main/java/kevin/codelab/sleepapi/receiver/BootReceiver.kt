@@ -1,6 +1,7 @@
 package kevin.codelab.sleepapi.receiver
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -46,7 +47,7 @@ class BootReceiver : BroadcastReceiver(){
      * check is the 28 and below version of the activity recognition permission (needed for
      * accessing sleep data).
      */
-    @RequiresApi(Build.VERSION_CODES.Q)
+    @SuppressLint("MissingPermission")
     private fun subscribeToSleepSegmentUpdates(context: Context, pendingIntent: PendingIntent) {
         Log.d(TAG, "subscribeToSleepSegmentUpdates()")
         if (activityRecognitionPermissionApproved(context)) {
