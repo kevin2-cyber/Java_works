@@ -1,6 +1,7 @@
 package kevin.codelab.splashscreen
 
 import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -12,7 +13,7 @@ class MainViewModel : ViewModel() {
 
     init {
         viewModelScope.launch {
-            delay1(3000)
+            delay(3000)
             _isLoading.value = false
         }
     }
