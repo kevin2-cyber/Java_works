@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         TextView tvTextTwo = findViewById(R.id.tv_text_2);
 
         tvTextOne.setOnClickListener(v ->
-                Toast.makeText(MainActivity.this,"Clicked Text one", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Clicked Text one", Toast.LENGTH_LONG).show()
         );
 
         tvTextTwo.setOnClickListener(v ->
-                Toast.makeText(MainActivity.this,"Clicked Text Two", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Clicked Text Two", Toast.LENGTH_LONG).show()
         );
     }
 }
