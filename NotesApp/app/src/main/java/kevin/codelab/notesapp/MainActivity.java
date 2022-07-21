@@ -2,6 +2,7 @@ package kevin.codelab.notesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -19,11 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
-        TextView textView = findViewById(R.id.tvHello);
-        textView.setOnClickListener(v ->
-                Toast.makeText(MainActivity.this,
-                                "Nice",
-                                Toast.LENGTH_LONG)
-                        .show());
+        binding.welcomeBtn.setOnClickListener(
+                view ->
+                startActivity(
+                        new Intent(this, SignUpActivity.class)
+                )
+        );
+        finish();
+
     }
 }
