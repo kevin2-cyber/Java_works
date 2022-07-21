@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notes App</string>
+    <string name="tv_text">A simple note app with firebase</string>
+    <string name="get_started">Get Started</string>
+</resources>
