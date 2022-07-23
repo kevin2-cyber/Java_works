@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Notes App</string>
     <string name="tv_text">A simple note app with firebase</string>
-    <string name="get_started">Get Started</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
     <string name="login_image">Login Image</string>
 </resources>

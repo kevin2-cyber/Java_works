@@ -20,11 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
-        binding.welcomeBtn.setOnClickListener(
+        binding.signUpBtn.setOnClickListener(
                 view ->
                 startActivity(
                         new Intent(this, SignUpActivity.class)
                 )
+        );
+        finish();
+
+        binding.signInBtn.setOnClickListener(
+                view ->
+                        startActivity(
+                                new Intent(this, LoginActivity.class)
+                        )
         );
         finish();
 
