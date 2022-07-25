@@ -11,6 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:nestedScrollingEnabled="true"
-        tools:ignore="NestedScrolling" />
+        tools:ignore="NestedScrolling" >
+
+        <TextView
+            android:id="@+id/text"
+            android:textSize="20sp"
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </ListView>
 
 </ScrollView>
