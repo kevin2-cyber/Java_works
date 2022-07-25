@@ -9,7 +9,6 @@ import kevin.codelab.notesapp.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private @Nullable
     ActivityHomeBinding binding;
 
     @Override

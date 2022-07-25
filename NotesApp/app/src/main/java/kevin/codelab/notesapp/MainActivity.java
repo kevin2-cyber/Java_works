@@ -13,7 +13,7 @@ import kevin.codelab.notesapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private @Nullable ActivityMainBinding binding;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

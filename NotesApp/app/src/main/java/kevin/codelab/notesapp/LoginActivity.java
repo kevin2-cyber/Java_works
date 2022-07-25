@@ -10,7 +10,7 @@ import kevin.codelab.notesapp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private @Nullable ActivityLoginBinding binding;
+    ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

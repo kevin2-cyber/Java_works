@@ -10,7 +10,7 @@ import kevin.codelab.notesapp.databinding.ActivitySignUpBinding;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private @Nullable
+
     ActivitySignUpBinding binding;
 
     @Override
