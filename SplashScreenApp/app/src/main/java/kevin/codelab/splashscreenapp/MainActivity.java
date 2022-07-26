@@ -10,7 +10,6 @@ import android.animation.ObjectAnimator;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.animation.AnticipateInterpolator;
 
 public class MainActivity extends AppCompatActivity {
