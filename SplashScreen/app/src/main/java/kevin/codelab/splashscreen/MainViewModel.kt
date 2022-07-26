@@ -12,11 +12,6 @@ class MainViewModel : ViewModel() {
     val isLoading = _isLoading.asStateFlow()
 
     init {
-        viewModelScope.launch {
-           suspend {
-               delay(3000)
-               _isLoading.value = false
-           }
-        }
+
     }
 }
