@@ -9,6 +9,8 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import kevin.codelab.splashscreen.databinding.ActivityMainBinding
+import java.time.Instant
+import javax.xml.datatype.Duration
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +36,19 @@ class MainActivity : AppCompatActivity() {
             }
 
             slideUp.start()
+        }
+
+        // Get the duration of the animated vector drawable.
+        val animationDuration = splashScreenView.iconAnimationDuration
+// Get the start time of the animation.
+        val animationStart = splashScreenView.iconAnimationStart
+// Calculate the remaining duration of the animation.
+        val remainingDuration = if (animationDuration != null && animationStart != null) {
+            (animationDuration - Duration.between(animationStart, Instant.now()))
+                .toMillis()
+                .coerceAtLeast(0L)
+        } else {
+            0L
         }
 
         setContentView(binding.root)
