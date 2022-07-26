@@ -9,14 +9,8 @@ public class Main {
 
         calculateScore(true, score, levelCompleted, bonus);
 
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
+        calculateScore(true, 10000, 8, 200);
 
-        if (gameOver) {
-            int finalScore = score + (levelCompleted * bonus);
-            System.out.println("Your final score was " + finalScore);
-        }
 
         int[] num2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
