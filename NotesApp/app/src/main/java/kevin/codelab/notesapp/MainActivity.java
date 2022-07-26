@@ -1,8 +1,11 @@
 package kevin.codelab.notesapp;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,12 +15,14 @@ import kevin.codelab.notesapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    ActivityMainBinding binding;
 
+    @RequiresApi(api = Build.VERSION_CODES.S)
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
+        getSplashScreen().setSplashScreenTheme(R.style.Theme_AppCompat_SplashDay);
         setContentView(binding.getRoot());
 
         binding.signUpBtn.setOnClickListener(

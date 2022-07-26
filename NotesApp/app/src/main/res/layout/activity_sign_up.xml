@@ -36,8 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="emailAddress"
+            android:hint="@string/password"
             android:inputType="textPassword"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
 
 
@@ -55,11 +56,13 @@
         app:layout_constraintVertical_bias="0.592">
 
         <EditText
+            android:id="@+id/et_conf_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
+            android:hint="@string/confirm_password"
             android:inputType="textPassword"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -79,8 +82,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
-            tools:ignore="LabelFor"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="467dp" />
 
@@ -97,7 +101,8 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 
 
