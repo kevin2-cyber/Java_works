@@ -7,7 +7,7 @@ public class Main {
         int levelCompleted = 5;
         int bonus = 100;
 
-        calculateScore(true, score, levelCompleted, bonus);
+        calculateScore(gameOver, score, levelCompleted, bonus);
 
         calculateScore(true, 10000, 8, 200);
 
@@ -17,6 +17,8 @@ public class Main {
 //        for (int i = 0; i < num2.length; i++) {
 //            System.out.println("i = " + i);
 //        }
+
+
     }
 
     public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
