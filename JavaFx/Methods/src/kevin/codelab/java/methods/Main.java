@@ -32,12 +32,13 @@ public class Main {
     }
 
     public static void displayHighScorePosition(String playerName, int playerPosition){
-        System.out.println(playerName + " managed to get into position " + playerPosition + " on high score table.");
+        System.out.println(playerName + " managed to get into position "
+                + playerPosition + " on high score table.");
     }
 
     public static int calculateHighScorePosition(int playerScore) {
         if (playerScore > 1000) {
-            
+
         }
         return 0;
     }
