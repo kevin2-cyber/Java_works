@@ -30,4 +30,8 @@ public class Main {
             return -1;
         }
     }
+
+    public static void displayHighScorePosition(String playerName, int playerPosition){
+        System.out.println(playerName + " managed to get into position " + playerPosition + " on high score table.");
+    }
 }
