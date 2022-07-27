@@ -27,6 +27,9 @@ public class Main {
         highScorePosition = calculateHighScorePosition(400);
         displayHighScorePosition("Kofi", highScorePosition);
 
+        highScorePosition = calculateHighScorePosition(50);
+        displayHighScorePosition("Gilbert", highScorePosition);
+
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
