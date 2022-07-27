@@ -18,6 +18,9 @@ public class Main {
         highScore = calculateScore(gameOver, score, levelCompleted, bonus);
         System.out.println("Your final score was " + highScore);
 
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("Tim", highScorePosition);
+
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
