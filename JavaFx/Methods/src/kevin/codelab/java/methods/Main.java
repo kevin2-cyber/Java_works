@@ -36,7 +36,7 @@ public class Main {
         highScorePosition = calculateHighScorePosition(100);
         displayHighScorePosition("Frank", highScorePosition);
 
-        checkNumber(12);
+        checkNumber(0);
 
     }
 
