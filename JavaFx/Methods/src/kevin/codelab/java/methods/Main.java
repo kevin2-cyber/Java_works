@@ -36,6 +36,8 @@ public class Main {
         highScorePosition = calculateHighScorePosition(100);
         displayHighScorePosition("Frank", highScorePosition);
 
+        checkNumber(12);
+
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
