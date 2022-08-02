@@ -11,4 +11,8 @@ public class SpeedConverter {
 
         return 1;
     }
+
+    public static void printConversion(double kilometersPerHour) {
+
+    }
 }
