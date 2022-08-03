@@ -12,4 +12,9 @@ public class Overloading {
         System.out.println("Player " + playerName + " scored " + score + " points");
         return score * 1000;
     }
+
+    public static int calculateScore( int score) {
+        System.out.println("Unnamed Player scored " + score + " points");
+        return score * 1000;
+    }
 }
