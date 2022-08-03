@@ -24,4 +24,6 @@ public class Overloading {
         System.out.println("No player name, no player score.");
         return 0;
     }
+
+    public static void calcFeetAndInchesToCentimeters(int feet, int inches){}
 }
