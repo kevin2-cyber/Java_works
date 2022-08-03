@@ -38,7 +38,7 @@ public class Main {
 
         checkNumber(0);
 
-        double miles = SpeedConverter.toMilesPerHour(20.5);
+        long miles = SpeedConverter.toMilesPerHour(20.5);
         System.out.println("Miles = " + miles);
 
     }
