@@ -1,4 +1,4 @@
-package kevin.codelab.java.methods;
+package kevin.codelab.java.methods.major;
 
 public class Main {
     public static void main(String[] args) {
