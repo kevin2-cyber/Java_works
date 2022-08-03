@@ -38,6 +38,9 @@ public class Main {
 
         checkNumber(0);
 
+        double miles = SpeedConverter.toMilesPerHour(20.5);
+        System.out.println("Miles = " + miles);
+
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
