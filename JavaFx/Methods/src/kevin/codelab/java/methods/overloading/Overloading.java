@@ -15,7 +15,7 @@ public class Overloading {
         return score * 1000;
     }
 
-    public static int calculateScore( int score) {
+    public static int calculateScore(int score) {
         System.out.println("Unnamed Player scored " + score + " points");
         return score * 1000;
     }
