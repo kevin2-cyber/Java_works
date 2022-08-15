@@ -1,3 +1,5 @@
+package com.example.sns;
+
 public class Searching {
     static String search(int algorithmID, int[] arr, int key){
         int solution = 0;

@@ -1,3 +1,5 @@
+package com.example.sns;
+
 import java.util.*;
 public class Sorting {
     static void sort (int algorithmID, int[] arr){

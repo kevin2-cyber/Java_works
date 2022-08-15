@@ -1,14 +1,16 @@
+package com.example.sns;
+
 import java.util.Scanner;
 /*
 process ID = 1 => searching
 process ID = 2 => sorting 
 
-algoritm ID = 1 => DEPENDS ON PROCESS ID is either linear search or selection sort
-algoritm ID = 2 => DEPENDS ON PROCESS ID is either binary search or insertion sort
-algoritm ID = 3 => shell sort
-algoritm ID = 4 => quick sort
-algoritm ID = 5 => merge sort
-algoritm ID = 6 => radix sort
+algorithm ID = 1 => DEPENDS ON PROCESS ID is either linear search or selection sort
+algorithm ID = 2 => DEPENDS ON PROCESS ID is either binary search or insertion sort
+algorithm ID = 3 => shell sort
+algorithm ID = 4 => quick sort
+algorithm ID = 5 => merge sort
+algorithm ID = 6 => radix sort
 */
 public class App {
     public static void main(String[] args){ 
@@ -75,10 +77,8 @@ public class App {
         if (processID!=3){
             String algorithm = scanner.next();
             switch (algorithm) {
-                case "linear" -> algorithmID = 1;
-                case "binary" -> algorithmID = 2;
-                case "selection" -> algorithmID = 1;
-                case "insertion" -> algorithmID = 2;
+                case "linear", "selection" -> algorithmID = 1;
+                case "binary", "insertion" -> algorithmID = 2;
                 case "shell" -> algorithmID = 3;
                 case "quick" -> algorithmID = 4;
                 case "merge" -> algorithmID = 5;
