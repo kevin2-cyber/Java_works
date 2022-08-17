@@ -85,9 +85,7 @@ public class DrawingView extends View {
 
         switch (event.getAction()) {
 
-            case 1:
-                int actionDown = MotionEvent.ACTION_DOWN;
-                 {
+            case MotionEvent.ACTION_DOWN -> {
                      int gtCl = mDrawPath.getColor();
                      gtCl = color;
                      float mDBrush = mDrawPath.getBrushThickness();
@@ -103,9 +101,7 @@ public class DrawingView extends View {
             }
             break;
 
-            case 2:
-                int actionMove = MotionEvent.ACTION_MOVE;
-            {
+            case MotionEvent.ACTION_MOVE -> {
                 if (touchX != null) {
                     if (touchY != null) {
                         mDrawPath.lineTo(touchX, touchY);
@@ -114,9 +110,7 @@ public class DrawingView extends View {
             }
             break;
 
-            case 3:
-                int actionUp = MotionEvent.ACTION_UP;
-            {
+            case MotionEvent.ACTION_UP -> {
                 mPaths.add(mDrawPath);
                 mDrawPath = new CustomPath(color, (float) mBrushSize);
             }
@@ -138,7 +132,6 @@ public class DrawingView extends View {
 
         strokeWidth = (float) mBrushSize;
     }
-
     protected void setColor(String newColor){
         color = Color.parseColor(newColor);
         int gtColor = mDrawPaint.getColor();
