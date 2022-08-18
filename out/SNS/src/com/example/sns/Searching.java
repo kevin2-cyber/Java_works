@@ -16,7 +16,7 @@ public class Searching {
             answer = "cannot implement binary sort on unsorted array\n";
         }
         else{
-            answer = Integer.toString(solution) + " was found in the array\n";
+            answer = solution + " was found in the array\n";
         }
         
         return answer;
