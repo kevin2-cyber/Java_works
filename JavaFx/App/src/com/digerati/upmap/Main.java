@@ -1,4 +1,3 @@
 package com.digerati.upmap;
 
-public class Main {
-}
+public class Main {}
