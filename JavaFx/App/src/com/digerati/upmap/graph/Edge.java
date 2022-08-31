@@ -1,5 +1,7 @@
 package com.digerati.upmap.graph;
 
+import java.util.Collection;
+
 public class Edge implements Comparable<Edge>, Cloneable{
     private Node source;
     private Node destination;
@@ -49,6 +51,10 @@ public class Edge implements Comparable<Edge>, Cloneable{
 
     public int getTime() {
         return time;
+    }
+
+    public String getLandmarks() {
+        return this.landMarks;
     }
 
     public double getDistance() {

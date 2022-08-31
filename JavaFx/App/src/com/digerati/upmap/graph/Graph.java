@@ -1,9 +1,6 @@
 package com.digerati.upmap.graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Graph {
     protected final HashMap<Node, ArrayList<Node>> GRAPH = new HashMap<>();
@@ -51,6 +48,28 @@ public class Graph {
             distance += edge.getDistance();
         }
         return distance;
+    }
+
+    public List<String> getLandmarks(ArrayList<Node> nodes) {
+        List<String> landmarks = new ArrayList<>();
+        for (int i = 0; i < nodes.size(); i++) {
+            Edge edge = getEdge(nodes.get(i), nodes.get(i + 1));
+            if (!edge.getLandmarks().isEmpty()) {
+                landmarks.add(edge.getLandmarks());
+            }
+        }
+        return landmarks;
+    }
+
+    public List<Edge> findEdgesWithLandmark(String landmark){
+        List<Edge> edges = new ArrayList<>();
+        for (Edge edge :
+                this.EDGES) {
+            if (edge.getLandmarks().toLowerCase().contains(landmark.toLowerCase())) {
+                edges.add(edge);
+            }
+        }
+        return edges;
     }
 
     public ArrayList<Edge> getDestinationEdges(Node source) {

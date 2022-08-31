@@ -1,12 +1,15 @@
 package com.digerati.upmap;
 
 
+import com.digerati.upmap.algorithms.Dijkstra;
 import com.digerati.upmap.graph.Edge;
 import com.digerati.upmap.graph.Graph;
 import com.digerati.upmap.graph.Node;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class Main {
@@ -150,10 +153,15 @@ public class Main {
         shortestPathResultLabel.setBounds(10, 130, WINDOW_WIDTH - 10, 20);
         frame.add(shortestPathResultLabel);
 
+        // Shortest Distance Result
+        JLabel shortestDistanceResultLabel = new JLabel();
+        shortestDistanceResultLabel.setBounds(10,150,WINDOW_WIDTH - 10,20);
+        frame.add(shortestDistanceResultLabel);
+
         // Landmarks
-        JLabel landMarkResultLable = new JLabel("Land Marks:");
-        landMarkResultLable.setBounds(10,170,WINDOW_WIDTH - 10,20);
-        frame.add(landMarkResultLable);
+        JLabel landMarkResultLabel = new JLabel("Land Marks:");
+        landMarkResultLabel.setBounds(10,170,WINDOW_WIDTH - 10,20);
+        frame.add(landMarkResultLabel);
 
         JSeparator sep = new JSeparator();
         sep.setBounds(5,195,WINDOW_WIDTH - 5,10);
@@ -190,8 +198,18 @@ public class Main {
         btnFindLandmark.setBounds( WINDOW_WIDTH / 2 + 10, 430, 200, 50);
         frame.add(btnFindLandmark);
 
+        btnFindShortestPath.addActionListener( event -> {
+            String sourceName = Objects.requireNonNull(sourceSelectionBox.getSelectedItem()).toString();
+            String destName = Objects.requireNonNull(destinationSelectionBox.getSelectedItem()).toString();
 
+            Node sourceNode = graph.getNodeByName(sourceName);
+            Node destNode = graph.getNodeByName(destName);
+            ArrayList<Node> shortestPath = Dijkstra.findShortestPath(graph, sourceNode, destNode);
 
+            shortestPathResultLabel.setText("The Shortest Route: " + shortestPath);
+            shortestDistanceResultLabel.setText("Total Distance: " + Dijkstra.getDistance(destNode));
+            landMarkResultLabel.setText("Landmarks: " + graph.getLandmarks(shortestPath));
+        });
 
     }
 }
