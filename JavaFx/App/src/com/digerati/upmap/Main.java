@@ -1,11 +1,13 @@
 package com.digerati.upmap;
 
+
 import com.digerati.upmap.graph.Edge;
 import com.digerati.upmap.graph.Graph;
 import com.digerati.upmap.graph.Node;
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -126,5 +128,70 @@ public class Main {
         destinationSelectionBox.setBounds(WINDOW_WIDTH/2 + 50, 20, WINDOW_WIDTH/2-100, 40);
         frame.add(destinationSelectionBox);
         frame.add(destinationLabel);
+
+        // Find Shortest Button
+        JButton btnFindShortestPath = new JButton("Find Shortest Route");
+        btnFindShortestPath.setBounds(WINDOW_WIDTH/2 - 300, 70, 300, 60);
+        frame.add(btnFindShortestPath);
+
+        // Find Fastest Button
+        JButton btnFindFastestPath = new JButton("Find Fastest Route");
+        btnFindFastestPath.setBounds(WINDOW_WIDTH/2 + 50, 70, 300, 60);
+        frame.add(btnFindFastestPath);
+
+        // Find label
+        JLabel shortestPathLabel = new JLabel("Best Routes: ");
+        shortestPathLabel.setBounds(10, 110, WINDOW_WIDTH/2 - 100, 20);
+        shortestPathLabel.setForeground(Color.MAGENTA);
+        frame.add(shortestPathLabel);
+
+        // Shortest Route Result
+        JLabel shortestPathResultLabel = new JLabel();
+        shortestPathResultLabel.setBounds(10, 130, WINDOW_WIDTH - 10, 20);
+        frame.add(shortestPathResultLabel);
+
+        // Landmarks
+        JLabel landMarkResultLable = new JLabel("Land Marks:");
+        landMarkResultLable.setBounds(10,170,WINDOW_WIDTH - 10,20);
+        frame.add(landMarkResultLable);
+
+        JSeparator sep = new JSeparator();
+        sep.setBounds(5,195,WINDOW_WIDTH - 5,10);
+        frame.add(sep);
+
+        JLabel altPathLabel = new JLabel("Alternative Routes");
+        altPathLabel.setForeground(Color.MAGENTA);
+        altPathLabel.setBounds(10,220,WINDOW_WIDTH - 10,20);
+        frame.add(altPathLabel);
+
+
+        JTextArea area = new JTextArea();
+        JScrollPane pane = new JScrollPane();
+        pane.getViewport ().setView(area);
+        pane.setBounds(10,240,WINDOW_WIDTH - 20,150);
+        frame.add(pane);
+
+        JSeparator sep2 = new JSeparator();
+        sep2.setBounds(5,400,WINDOW_WIDTH - 5,10);
+        frame.add(sep2);
+
+        // Landmarks
+        JLabel landmarkLabel = new JLabel("Enter landmark query");
+        landmarkLabel.setForeground(Color.MAGENTA);
+        landmarkLabel.setBounds(10,410,WINDOW_WIDTH - 10,20);
+        frame.add(landmarkLabel);
+
+        JTextField landmarkInput = new JTextField();
+        landmarkInput.setBounds(10, 430, WINDOW_WIDTH/ 2,50);
+        frame.add(landmarkInput);
+
+        // Find Landmark
+        JButton btnFindLandmark = new JButton("Find Landmark");
+        btnFindLandmark.setBounds( WINDOW_WIDTH / 2 + 10, 430, 200, 50);
+        frame.add(btnFindLandmark);
+
+
+
+
     }
 }
