@@ -1,7 +1,10 @@
 package com.digerati.upmap;
 
 
+import com.digerati.upmap.algorithms.AStar;
+import com.digerati.upmap.algorithms.DFS;
 import com.digerati.upmap.algorithms.Dijkstra;
+import com.digerati.upmap.algorithms.VogelsApproximationMethod;
 import com.digerati.upmap.graph.Edge;
 import com.digerati.upmap.graph.Graph;
 import com.digerati.upmap.graph.Node;
@@ -9,6 +12,7 @@ import com.digerati.upmap.graph.Node;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -209,7 +213,58 @@ public class Main {
             shortestPathResultLabel.setText("The Shortest Route: " + shortestPath);
             shortestDistanceResultLabel.setText("Total Distance: " + Dijkstra.getDistance(destNode));
             landMarkResultLabel.setText("Landmarks: " + graph.getLandmarks(shortestPath));
+
+            ArrayList<ArrayList<Node>> allPaths = DFS.findAllPaths(graph, sourceNode, destNode);
+
+            StringBuilder builder = new StringBuilder();
+            for (ArrayList<Node> nodes :
+                    allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)){
+                String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
+                builder.append(nodes.toString() + ", " + distance + "\n");
+            }
+            area.setText(builder.toString());
         });
+
+
+        btnFindFastestPath.addActionListener( event -> {
+            String sourceName = Objects.requireNonNull(sourceSelectionBox.getSelectedItem()).toString();
+            String destName = Objects.requireNonNull(destinationSelectionBox.getSelectedItem()).toString();
+
+            Node sourceNode = graph.getNodeByName(sourceName);
+            Node destNode = graph.getNodeByName(destName);
+            Dijkstra.findShortestPath(graph, sourceNode, destNode);
+            List<Node> fastestPath = AStar.findFastestPath(graph, sourceNode, destNode);
+
+            assert fastestPath != null;
+            shortestPathResultLabel.setText("The Fastest Route: " + fastestPath.toString());
+            shortestDistanceResultLabel.setText("Total Distance: " + VogelsApproximationMethod.getTotalCost(graph, sourceNode, destNode));
+            landMarkResultLabel.setText("Landmarks: " + graph.getLandmarks((ArrayList<Node>) fastestPath));
+
+            ArrayList<ArrayList<Node>> allPaths = DFS.findAllPaths(graph, sourceNode, destNode);
+
+            StringBuilder builder = new StringBuilder();
+            for (ArrayList<Node> nodes :
+                    allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)) {
+                String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
+                builder.append(nodes.toString() + ", " + distance + "\n");
+            }
+            area.setText(builder.toString());
+        });
+
+        btnFindLandmark.addActionListener(event -> {
+            String landmark = landmarkInput.getText().toString();
+            List<Edge> edges = graph.findEdgesWithLandmark(landmark);
+            
+            StringBuilder builder = new StringBuilder();
+            for (Edge edge :
+                    edges) {
+                builder.append(edge.getSource().getName() + " -->" + edge.getDestination().getName() + "\n");
+            }
+            area.setText(builder.toString());
+        });
+
+        frame.setLayout(null);
+        frame.setVisible(true);
 
     }
 }
