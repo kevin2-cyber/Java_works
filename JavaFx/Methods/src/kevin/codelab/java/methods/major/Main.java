@@ -72,6 +72,7 @@ public class Main {
 //        } else {
 //            return 4;
 //        }
+
         int position = 4;
 
         if (playerScore >= 1000) {
