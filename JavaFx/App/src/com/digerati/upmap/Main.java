@@ -220,7 +220,7 @@ public class Main {
             for (ArrayList<Node> nodes :
                     allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)){
                 String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
-                builder.append(nodes.toString() + ", " + distance + "\n");
+                builder.append(nodes).append(", ").append(distance).append("\n");
             }
             area.setText(builder.toString());
         });
