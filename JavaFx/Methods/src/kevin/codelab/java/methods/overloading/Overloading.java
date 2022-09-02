@@ -11,6 +11,8 @@ public class Overloading {
         if (centimeters < 0.0)
             System.out.println("Invalid parameters");
 
+        calcFeetAndInchesToCentimeters(100);
+
     }
 
     public static int calculateScore(String playerName, int score) {
@@ -63,5 +65,16 @@ public class Overloading {
         centimeters += inches * 2.54;
         System.out.println(feet + " feet, " + inches + " inches = " + centimeters + " cm");
         return centimeters;
+    }
+
+    public static double calcFeetAndInchesToCentimeters(double inches) {
+        if (inches < 0) {
+            return -1;
+        }
+
+        double feet = (int) inches / 12;
+        double remainingInches = (int) inches % 12;
+        System.out.println(inches + " inches  is equal to " + feet + " feet and " + remainingInches + "inches");
+        return calcFeetAndInchesToCentimeters(feet, remainingInches);
     }
 }
