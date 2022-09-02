@@ -7,7 +7,9 @@ public class Overloading {
         System.out.println("New score is " + newScore);
         calculateScore(75);
         calculateScore();
-        calcFeetAndInchesToCentimeters(6, 0);
+        double centimeters = calcFeetAndInchesToCentimeters(6, 0);
+        if (centimeters < 0.0)
+            System.out.println("Invalid parameters");
 
     }
 
@@ -53,6 +55,7 @@ public class Overloading {
 
     public static double calcFeetAndInchesToCentimeters(double feet, double inches) {
         if ((feet < 0) || (inches < 0) || (inches > 12) ) {
+            System.out.println("Invalid feet or inches parameters");
             return -1;
         }
 
