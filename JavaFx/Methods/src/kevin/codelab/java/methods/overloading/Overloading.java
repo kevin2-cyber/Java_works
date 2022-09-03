@@ -89,5 +89,12 @@ public class Overloading {
     // and ZZ the seconds.
 
     // Create a 2nd method of the same name but with only one parameter seconds.
+    //
     // Validate that it is >=0, and return "Invalid value" if it is not true.
+    //
+    // If it is valid, then calculate how many minutes are in the seconds value and then call
+    // the other overloaded method passing the correct minutes and seconds calculated so
+    // that it can calculate correctly.
+    //
+    // Call both methods to print values to the console.
 }
