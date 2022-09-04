@@ -97,4 +97,8 @@ public class Overloading {
     // that it can calculate correctly.
     //
     // Call both methods to print values to the console.
+
+    public static String getDurationString(long minutes, long seconds) {
+        return "";
+    }
 }
