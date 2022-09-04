@@ -1,5 +1,7 @@
 package kevin.codelab.java.methods.overloading;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Overloading {
 
     public static void main(String[] args) {
@@ -98,7 +100,7 @@ public class Overloading {
     //
     // Call both methods to print values to the console.
 
-    private static String getDurationString(long minutes, long seconds) {
+    private static @NotNull String getDurationString(long minutes, long seconds) {
         return "";
     }
 }
