@@ -14,6 +14,8 @@ public class Overloading {
             System.out.println("Invalid parameters");
 
         calcFeetAndInchesToCentimeters(100);
+        System.out.println(getDurationString(65,45));
+        System.out.println(getDurationString(3945));
 
     }
 
@@ -98,9 +100,26 @@ public class Overloading {
     // the other overloaded method passing the correct minutes and seconds calculated so
     // that it can calculate correctly.
     //
-    // Call both methods to print values to the console.
+    // Call both methods to print  values to the console.
 
     private static @NotNull String getDurationString(long minutes, long seconds) {
-        return "";
+        if ((minutes < 0) || (seconds < 0) || (seconds > 59)) {
+            return "Invalid value";
+        }
+
+        long hours = minutes / 60;
+        long remainingMinutes = minutes % 60;
+        return hours + "h " + remainingMinutes + "m " + seconds + "s";
+    }
+
+    private static String getDurationString(long seconds) {
+        if (seconds < 0) {
+            return "Invalid value";
+        }
+
+        long minutes  = seconds / 60;
+        long remainingSeconds = seconds % 60;
+
+        return getDurationString(minutes, remainingSeconds);
     }
 }
