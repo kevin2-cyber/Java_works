@@ -1,6 +1,5 @@
 package com.digerati.upmap.graph;
 
-import java.util.Collection;
 
 public class Edge implements Comparable<Edge>, Cloneable{
     private Node source;

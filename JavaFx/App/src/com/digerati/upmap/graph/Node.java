@@ -14,8 +14,7 @@ public class Node {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Node) {
-            Node other = (Node) obj;
+        if (obj instanceof Node other) {
             return other.getName().equals(getName());
         }
         return false;

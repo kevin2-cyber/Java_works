@@ -246,7 +246,7 @@ public class Main {
             for (ArrayList<Node> nodes :
                     allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)) {
                 String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
-                builder.append(nodes.toString() + ", " + distance + "\n");
+                builder.append(nodes).append(", ").append(distance).append("\n");
             }
             area.setText(builder.toString());
         });
@@ -258,7 +258,7 @@ public class Main {
             StringBuilder builder = new StringBuilder();
             for (Edge edge :
                     edges) {
-                builder.append(edge.getSource().getName() + " -->" + edge.getDestination().getName() + "\n");
+                builder.append(edge.getSource().getName()).append(" -->").append(edge.getDestination().getName()).append("\n");
             }
             area.setText(builder.toString());
         });
