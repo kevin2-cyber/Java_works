@@ -4,6 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Overloading {
 
+    private static final String INVALID_VALUE_MESSAGE  = "Invalid value";
     public static void main(String[] args) {
         int newScore = calculateScore("Tim", 500);
         System.out.println("New score is " + newScore);
@@ -104,7 +105,7 @@ public class Overloading {
 
     private static @NotNull String getDurationString(long minutes, long seconds) {
         if ((minutes < 0) || (seconds < 0) || (seconds > 59)) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
 
         long hours = minutes / 60;
@@ -128,7 +129,7 @@ public class Overloading {
 
     private static String getDurationString(long seconds) {
         if (seconds < 0) {
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
 
         long minutes  = seconds / 60;
