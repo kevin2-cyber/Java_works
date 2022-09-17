@@ -214,15 +214,7 @@ public class Main {
             shortestDistanceResultLabel.setText("Total Distance: " + Dijkstra.getDistance(destNode));
             landMarkResultLabel.setText("Landmarks: " + graph.getLandmarks(shortestPath));
 
-            ArrayList<ArrayList<Node>> allPaths = DFS.findAllPaths(graph, sourceNode, destNode);
-
-            StringBuilder builder = new StringBuilder();
-            for (ArrayList<Node> nodes :
-                    allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)){
-                String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
-                builder.append(nodes).append(", ").append(distance).append("\n");
-            }
-            area.setText(builder.toString());
+            allPaths(graph, area, sourceNode, destNode);
         });
 
 
@@ -240,15 +232,7 @@ public class Main {
             shortestDistanceResultLabel.setText("Total Distance: " + VogelsApproximationMethod.getTotalCost(graph, sourceNode, destNode));
             landMarkResultLabel.setText("Landmarks: " + graph.getLandmarks((ArrayList<Node>) fastestPath));
 
-            ArrayList<ArrayList<Node>> allPaths = DFS.findAllPaths(graph, sourceNode, destNode);
-
-            StringBuilder builder = new StringBuilder();
-            for (ArrayList<Node> nodes :
-                    allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)) {
-                String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
-                builder.append(nodes).append(", ").append(distance).append("\n");
-            }
-            area.setText(builder.toString());
+            allPaths(graph, area, sourceNode, destNode);
         });
 
         btnFindLandmark.addActionListener(event -> {
@@ -266,5 +250,17 @@ public class Main {
         frame.setLayout(null);
         frame.setVisible(true);
 
+    }
+
+    private static void allPaths(Graph graph, JTextArea area, Node sourceNode, Node destNode) {
+        ArrayList<ArrayList<Node>> allPaths = DFS.findAllPaths(graph, sourceNode, destNode);
+
+        StringBuilder builder = new StringBuilder();
+        for (ArrayList<Node> nodes :
+                allPaths.subList(allPaths.size() - 6, allPaths.size() - 1)) {
+            String distance = String.format("%.3f", graph.calculateDistance(nodes) / 1000f) + "km";
+            builder.append(nodes).append(", ").append(distance).append("\n");
+        }
+        area.setText(builder.toString());
     }
 }
