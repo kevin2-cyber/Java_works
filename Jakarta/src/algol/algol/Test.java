@@ -1,6 +1,6 @@
 package algol.algol;
 
-public class Euclid {
+public class Test {
     public static void main(String[] args) {
         int eu = euclid(60, 24);
         System.out.println(eu);
