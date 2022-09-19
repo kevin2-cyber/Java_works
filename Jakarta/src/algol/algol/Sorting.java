@@ -2,15 +2,13 @@ package algol.algol;
 
 public class Sorting {
 
-    public static boolean mergeSort(int[] arr, int l, int r) {
+    public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
             int m = l + (r-l)/2;
             mergeSort(arr, l, m);
             mergeSort(arr, m+1, r);
             merge(arr,l,m, r);
-            System.out.println(mergeSort(arr, l, r));
         }
-        return false;
     }
 
     private static void merge(int[] arr, int l, int m, int r) {

@@ -11,7 +11,6 @@ public class Test {
         int test2 = euclid(90, 40);
         System.out.println(test2);
         mergeSort(new int[]{2, 4, 6, 7, 3, 1, 3, 2, 4}, 4, 8);
-
     }
 
 
