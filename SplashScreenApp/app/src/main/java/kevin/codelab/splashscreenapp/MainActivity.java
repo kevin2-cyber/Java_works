@@ -12,16 +12,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
 
+import kevin.codelab.splashscreenapp.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding binding;
 
     @RequiresApi(api = Build.VERSION_CODES.S)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         getSplashScreen().setOnExitAnimationListener(splashScreenView -> {
             final ObjectAnimator slideUp = ObjectAnimator.ofFloat(
                     splashScreenView,
-                    View.TRANSLATION_Y,
+                    View.TRANSLATION_X,
                     0f,
                     -splashScreenView.getHeight()
             );
@@ -39,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
             // Run your animation.
             slideUp.start();
         });
-        setContentView(R.layout.activity_main);
+        setContentView(binding.getRoot());
 
 
-//        final View content = findViewById(R.id.content);
+        // final View content = findViewById(R.id.content);
 //        content.getViewTreeObserver().addOnPreDrawListener(
 //                new ViewTreeObserver.OnPreDrawListener() {
 //                    @Override
