@@ -8,17 +8,15 @@ import android.view.animation.AnticipateInterpolator
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
-import kevin.codelab.splashscreen.databinding.ActivityMainBinding
 import java.time.Instant
+import java.time.Period.between
+import java.time.chrono.ChronoPeriod.between
 import javax.xml.datatype.Duration
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
 
         splashScreen.setOnExitAnimationListener { splashScreenView ->
@@ -50,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 0L
             }
 
-            setContentView(binding.root)
+            setContentView(R.layout.activity_main)
         }
     }
 
