@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import java.time.Instant
 import java.time.Period.between
-import java.time.chrono.ChronoPeriod.between
 import javax.xml.datatype.Duration
 
 class MainActivity : AppCompatActivity() {
