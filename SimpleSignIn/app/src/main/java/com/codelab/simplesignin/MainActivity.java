@@ -25,29 +25,28 @@ public class MainActivity extends AppCompatActivity {
 
         Glide.with(getApplicationContext()).load(R.drawable.google)
                 .apply(bitmapTransform(new BlurTransformation(2)))
-                .into((ImageView) findViewById(R.id.google));
+                .into((ImageView) findViewById(binding.google.getId()));
 
         Glide.with(getApplicationContext()).load(R.drawable.fb)
                 .apply(bitmapTransform(new BlurTransformation(2)))
-                .into((ImageView) findViewById(R.id.fb));
+                .into((ImageView) findViewById(binding.fb.getId()));
 
         Glide.with(getApplicationContext()).load(R.drawable.twitter)
                 .apply(bitmapTransform(new BlurTransformation(2)))
-                .into((ImageView) findViewById(R.id.twitter));
+                .into((ImageView) findViewById(binding.twitter.getId()));
 
         Glide.with(getApplicationContext()).load(R.drawable.github)
                 .apply(bitmapTransform(new BlurTransformation(2)))
-                .into((ImageView) findViewById(R.id.github));
+                .into((ImageView) findViewById(binding.github.getId()));
 
         binding.loginbtn.setOnClickListener(
-                view -> {
-                    validateData();
-                }
+                view -> validateData()
         );
     }
 
     private void validateData(){
-        if (binding.username.getText().toString().equals("admin") && binding.password.getText().toString().equals("password")) {
+        if (binding.username.getText().toString().equals("admin")
+                && binding.password.getText().toString().equals("password")) {
             login();
         } else {
             Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void login(){
+        Intent intent = new Intent();
         startActivity(new Intent(this, WelcomeActivity.class));
         Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
     }
