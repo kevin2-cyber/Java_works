@@ -41,13 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
         binding.loginbtn.setOnClickListener(
                 view -> {
-                    if (binding.username.getText().toString().equals("admin") && binding.password.getText().toString().equals("password")) {
-                        startActivity(new Intent(this, WelcomeActivity.class));
-                        Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
-                    }
+                    validateData();
                 }
         );
+    }
+
+    private void validateData(){
+        if (binding.username.getText().toString().equals("admin") && binding.password.getText().toString().equals("password")) {
+            startActivity(new Intent(this, WelcomeActivity.class));
+            Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
+        }
     }
 }
