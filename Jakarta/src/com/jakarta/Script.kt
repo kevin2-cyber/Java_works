@@ -2,7 +2,7 @@ package com.jakarta
 
 import main.jakarta.Dao
 
-public open class Script(data: Int, money: Int) : Dao(data, money) {
+open class Script(data: Int, money: Int) : Dao(data, money) {
     override fun getData(): Int {
         return super.getData()
     }
