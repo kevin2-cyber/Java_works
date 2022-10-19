@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(binding.getRoot());
 
         TextView tvTextOne = findViewById(R.id.tv_text_1);
         TextView tvTextTwo = findViewById(R.id.tv_text_2);
