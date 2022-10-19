@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
-        TextView tvTextOne = findViewById(R.id.tv_text_1);
-        TextView tvTextTwo = findViewById(R.id.tv_text_2);
 
         binding.tvText1.setOnClickListener(v ->
                 Toast.makeText(this,"Clicked Text one", Toast.LENGTH_LONG).show()
