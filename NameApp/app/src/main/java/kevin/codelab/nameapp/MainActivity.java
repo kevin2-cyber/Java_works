@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         TextView tvTextOne = findViewById(R.id.tv_text_1);
         TextView tvTextTwo = findViewById(R.id.tv_text_2);
 
-        tvTextOne.setOnClickListener(v ->
+        binding.tvText1.setOnClickListener(v ->
                 Toast.makeText(this,"Clicked Text one", Toast.LENGTH_LONG).show()
         );
 
-        tvTextTwo.setOnClickListener(v ->
+        binding.tvText2.setOnClickListener(v ->
                 Toast.makeText(this,"Clicked Text Two", Toast.LENGTH_LONG).show()
         );
     }
