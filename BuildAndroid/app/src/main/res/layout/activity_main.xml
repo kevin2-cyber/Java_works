@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:background="@drawable/edit_text_shadow"
-            android:hint="Say Something"
+            android:hint="@string/say_something"
             android:inputType="text"/>
 
         <ImageView
