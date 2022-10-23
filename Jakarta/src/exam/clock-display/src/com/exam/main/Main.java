@@ -2,8 +2,8 @@ package com.exam.main;
 
 public class Main {
     public static void main(String[] args) {
-        NumberDisplay numberDisplay = new NumberDisplay(20);
-        String displayValue = numberDisplay.getDisplayValue();
-        System.out.println(displayValue);
+        ClockDisplay display = new ClockDisplay();
+        display.setTime(1, 20, 20);
+        System.out.println(display.getTime());
     }
 }
