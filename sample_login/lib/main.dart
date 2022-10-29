@@ -10,9 +10,7 @@ class LoginApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
       theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
       home: const Login(),
     );
   }

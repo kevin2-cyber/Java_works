@@ -13,11 +13,13 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          'Forpin Survey',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w600,
+        title: const Center(
+          child: Text(
+            'Forpin Survey',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         elevation: 0,
@@ -28,7 +30,7 @@ class Login extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+              height: 70,
             ),
             SvgPicture.asset(
               asset,
@@ -36,7 +38,7 @@ class Login extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.1,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+              height: 60,
             ),
             TextFormField(
               obscureText: false,
@@ -44,12 +46,11 @@ class Login extends StatelessWidget {
                 hintText: 'Email',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none,
                 ),
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
+              height: 10,
             ),
             TextFormField(
               obscureText: true,
@@ -57,12 +58,11 @@ class Login extends StatelessWidget {
                 hintText: 'Password',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none,
                 ),
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.04,
+              height: 40,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,

@@ -19,7 +19,7 @@ class _MainState extends State<Main> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: color2,
-        title: const Text('Forpin Survey'),
+        title: const Center(child: Text('Forpin Survey')),
         elevation: 0,
         actions: [
           PopupMenuButton<MenuItem>(
