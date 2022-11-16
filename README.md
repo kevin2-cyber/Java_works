@@ -1,2 +1,2 @@
 # Java_works
-For Android apps.
+For pure Android apps with java.
