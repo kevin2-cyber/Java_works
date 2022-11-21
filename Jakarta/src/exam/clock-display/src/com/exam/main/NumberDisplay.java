@@ -2,7 +2,7 @@ package com.exam.main;
 
 public class NumberDisplay {
 
-    private int limit;
+    private final int limit;
     private int value;
 
     public NumberDisplay(int rollOverLimit){

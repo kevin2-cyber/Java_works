@@ -2,9 +2,9 @@ package com.exam.main;
 
 public class ClockDisplay {
 
-    private NumberDisplay hours;
-    private NumberDisplay minutes;
-    private NumberDisplay seconds;
+    private final NumberDisplay hours;
+    private final NumberDisplay minutes;
+    private final NumberDisplay seconds;
     private String displayString;
 
     public ClockDisplay() {
