@@ -1,0 +1,42 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">General information about types</h1> 
+  <p>Java is a <strong>statically typed</strong> programming language, which means that every variable and every expression has a type that is known at the compile time.</p> 
+  <p>In Java, all data types are divided into two categories: <strong>primitive types</strong> and <strong>reference types</strong>.</p> 
+  <h2 style="text-align: center;">Primitive types</h2> 
+  <p>Java has eight primitive data types. They can be divided into four groups:</p> 
+  <ul> 
+   <li><strong>integer numbers</strong>: byte, short, int, long (for example, 83 is an integer number);</li> 
+   <li><strong>floating-point numbers</strong>: float, double (for example, 3.1415 is a floating point number);</li> 
+   <li><strong>logical type</strong>: boolean (true or false);</li> 
+   <li><strong>characters for representing letters and digest</strong>: char (for example, 'a', '3').</li> 
+  </ul> 
+  <p>These types are built into the language. The types belonging to the same group differ in size and, as a consequence, the set of possible values.</p> 
+  <p>Here is an example of declaring variables of different types and their initialization:</p> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+    int n = 4;
+    double pi = 3.1415;
+    boolean b = true;
+    char c = 'c';
+  }
+}</code></pre> 
+  <h2 style="text-align: center;">Sizes and ranges of primitive types</h2> 
+  <p><strong>Integer types</strong> store numbers such as 10, 15, -14. The size of the values that can be stored depends on the integer type that we choose. The range of values is calculated as <span class="math-tex">\( −(2^{n−1}) \)</span> to <span class="math-tex">\( (2^{n−1})−1 \)</span>, where n is the number of bits. The range includes 0 as well.</p> 
+  <ul> 
+   <li><strong>byte</strong>: the size is 8 bits (1 byte), the range is from -128 to 127</li> 
+   <li><strong>short</strong>: the size is 16 bits (2 bytes), the range is from -32768 to 32767</li> 
+   <li><strong>int</strong>: the size is 32 bits (4 bytes), the range is from <span class="math-tex">\( −(2^{31}) \)</span> to <span class="math-tex">\( (2^{31})−1 \)</span></li> 
+   <li><strong>long</strong>: the size is 64 bits (8 bytes), the range is from <span class="math-tex">\( −(2^{63}) \)</span> to <span class="math-tex">\( (2^{63})−1 \)</span></li> 
+  </ul> 
+  <p><strong>Floating-point types</strong> represent numbers with a fractional part.</p> 
+  <ul> 
+   <li><strong>float</strong>: the size is 32 bits (4 bytes), the range is from 3.4e−038 to 3.4e+038 (approximately, 6-7 significant decimal digits) </li> 
+   <li><strong>double</strong>: the size is 64 bits (8 bytes), the range is from 1.7e−308 to 1.7e+308 (approximately, 14-16 significant decimal digits) </li> 
+  </ul> 
+  <p>The <strong>character type</strong> (char) stores the character constant in the memory. The size is 16 bits (2 bytes). The range is from 0 to 65536 (unsigned).</p> 
+  <p>The <strong>boolean type</strong> can store only two values: <strong>true</strong> or <strong>false</strong>. It represents only one bit of information, but its size is not something that's precisely defined.</p> 
+  <p>So, remember Java has 8 primitive types. The most used are <strong>int</strong>, <strong>long</strong>, <strong>boolean</strong>, <strong>char</strong>, and <strong>double</strong>.</p>
+ </body>
+</html>

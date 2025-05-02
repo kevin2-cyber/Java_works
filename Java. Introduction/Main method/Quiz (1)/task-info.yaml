@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: 'two three '
+- text: 'one two three '
+- text: 'ArgPrinter one two three '
+- text: 'java ArgPrinter one two three '
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+- name: src/Task.class
+  visible: true
+  learner_created: true
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 18:11:38 UTC
+record: -1
+selected_options:
+- 1
+custom_name: Quiz

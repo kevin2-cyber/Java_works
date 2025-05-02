@@ -1,6 +1,7 @@
-package exam.aircondition.ticketmachine;
+package exam.ticketmachine;
 
 import java.util.Scanner;
+import exam.aircondition.ticketmachine.TicketMachine;
 
 public class Ticket {
     public static void main(String[] args) {

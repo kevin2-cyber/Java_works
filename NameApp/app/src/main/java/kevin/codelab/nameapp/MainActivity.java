@@ -7,21 +7,24 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import kevin.codelab.nameapp.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(binding.getRoot());
 
-        TextView tvTextOne = findViewById(R.id.tv_text_1);
-        TextView tvTextTwo = findViewById(R.id.tv_text_2);
 
-        tvTextOne.setOnClickListener(v ->
+        binding.tvText1.setOnClickListener(v ->
                 Toast.makeText(this,"Clicked Text one", Toast.LENGTH_LONG).show()
         );
 
-        tvTextTwo.setOnClickListener(v ->
+        binding.tvText2.setOnClickListener(v ->
                 Toast.makeText(this,"Clicked Text Two", Toast.LENGTH_LONG).show()
         );
     }

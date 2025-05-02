@@ -1,0 +1,38 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Single and double precision floating-point numbers</h1> 
+  <p>There are two primitive floating point types: single-precision <strong>float</strong> (32 bits) and double-precision <strong>double</strong> (64 bits).</p> 
+  <p>Let's declare and initialize some variables of these types:</p> 
+  <pre><code class="language-java">double zero = 0.0;
+    double e = 2.71828;      // or 2.71828d
+    double eps = 5e-3;       // 5 * 10^(-3) = 0.0005
+
+    float pi = 3.1415f;      // the literal f is always needed
+    float negValue = -0.15f; // the negative value</code></pre> 
+  <p>These types can store only a limited number of significant decimal digits (~6-7 for float and ~14-16 for double):</p> 
+  <pre><code class="language-java">float f = 0.888888888888888888f; // a value with a lot of decimal digits
+    System.out.println(f);           // it prints 0.8888889</code></pre> 
+  <p>The following code lets you know the size, the min and the max value of the double type:</p> 
+  <pre><code class="language-java">System.out.println(Double.SIZE);      // 64 bits
+    System.out.println(Double.MIN_VALUE); // 4.9E-324
+    System.out.println(Double.MAX_VALUE); // 1.7976931348623157E308</code></pre> 
+  <h2 style="text-align: center;">Arithmetic operations</h2> 
+  <p>It's possible to perform all arithmetic operations with <strong>double</strong> and <strong>float</strong> numbers: </p> 
+  <ul> 
+   <li>addition +</li> 
+   <li>subtraction -</li> 
+   <li>multiplication *</li> 
+   <li>integer division /</li> 
+   <li>remainder %</li> 
+  </ul> 
+  <pre><code class="language-java">System.out.println(3.4 + 6.1); // prints 9.5
+    System.out.println(1.1 * 2.0); // prints 2.2</code></pre> 
+  <p>We can even increment and decrement the numbers.</p> 
+  <p>But be careful, the operations with floating-point numbers can produce an inaccurate result:</p> 
+  <pre><code class="language-java">System.out.println(3.3 / 3); // prints 1.0999999999999999</code></pre> 
+  <p>Errors can accumulate during computation:</p> 
+  <pre><code class="language-java">double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1;
+    System.out.println(val); // it prints 0.9999999999999999</code></pre>
+ </body>
+</html>

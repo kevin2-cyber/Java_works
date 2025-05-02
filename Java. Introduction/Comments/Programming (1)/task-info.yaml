@@ -1,0 +1,23 @@
+type: code
+custom_name: Programming
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public class Main {
+
+        public static void main(String[] args) {
+
+            System.out.print("Hello, ");
+            System.out.print("world");
+            System.out.print(" and ");
+            System.out.print("Java");
+            System.out.print(" platform");
+        }
+    }
+  learner_created: false
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 16:29:53 UTC
+record: -1

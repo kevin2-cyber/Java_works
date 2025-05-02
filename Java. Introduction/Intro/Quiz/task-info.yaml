@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Not popular
+- text: Multithreaded
+- text: Platform independent
+- text: Object-oriented
+- text: Manual memory management
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 12:48:14 UTC
+record: -1
+selected_options:
+- 1
+- 2
+- 3

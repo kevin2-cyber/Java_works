@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.3.0' apply false
+    id 'com.android.library' version '7.3.0' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    appCompatVersion = '1.5.1'
+    constraintLayoutVersion = '2.1.4'
+    coreTestingVersion = '2.0.4'
+    lifecycleVersion = '2.5.1'
+    materialVersion = '1.6.1'
+    roomVersion = '2.4.3'
+    // testing
+    junitVersion = '4.13.2'
+    espressoVersion = '3.1.0'
+    androidxJunitVersion = '1.1.3'
+}

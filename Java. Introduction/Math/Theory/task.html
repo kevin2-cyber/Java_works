@@ -1,0 +1,68 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">The standard class Math</h1> 
+  <p>The standard class Math, contains a lot of methods for performing basic numeric operations including exponential, modulus, trigonometric functions, finding the max/min of two numbers and so on.</p> 
+  <p>The most common methods are listed below:</p> 
+  <ul> 
+   <li><strong>Math.abs(...)</strong> returns the absolute value of its argument</li> 
+   <li><strong>Math.sqrt(...)</strong> returns the square root of its argument</li> 
+   <li><strong>Math.cbrt(...)</strong> returns the cube root of its argument</li> 
+   <li><strong>Math.pow(..., ...)</strong> returns the value of the first argument raised to the power of the second argument </li> 
+   <li><strong>Math.min(..., ...)</strong> returns the smaller value of two arguments</li> 
+   <li><strong>Math.max(..., ...)</strong> returns the greater value of two arguments</li> 
+   <li><strong>Math.toRadians(...)</strong> converts an angle measured in degrees to an angle measured in radians (approximately) </li> 
+   <li><strong>Math.sin(...)</strong> returns the trigonometric sin of the given angle in radians</li> 
+   <li><strong>Math.cos(...)</strong> returns the trigonometric cos of the given angle in radians</li> 
+   <li><strong>Math.random()</strong> returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0 </li> 
+   <li><strong>Math.floor(...)</strong> returns the largest double value that is less than or equal to its argument and is equal to an integer </li> 
+   <li><strong>Math.ceil(...)</strong> returns the smallest double value that is greater than or equal to its argument and is equal to an integer </li> 
+  </ul> 
+  <p>More useful methods see in docs: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" rel="nofollow noopener noreferrer">https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html</a> </p> 
+  <p>Also this class has two useful constants:</p> 
+  <ul> 
+   <li><strong>Math.PI</strong> - the ratio of the circumference of a circle to its diameter</li> 
+   <li><strong>Math.E</strong> - the base of the natural logarithm</li> 
+  </ul> 
+  <p><strong>Examples</strong></p> 
+  <p>Let's look at examples of all the considered methods:</p> 
+  <pre><code class="language-java">int abs = Math.abs(-10); // abs is 10
+    double dabs = Math.abs(-10.33); // dabs is 10.33
+
+    double sqrt = Math.sqrt(2); // sqrt is 1.4142...
+    double cbrt = Math.cbrt(27.0); // cbrt is 3.0
+
+    double square = Math.pow(5, 2); // the square of 5 is 25.0
+    double cube = Math.pow(2, 3); // the cube of 2 is 8.0
+
+    int min = Math.min(11, 81); // min is 11
+    int max = Math.max(20, 30); // max is 30
+
+    double grad = Math.toRadians(30); // grad is 0.5235...
+
+    double pi = Math.PI; // pi is 3.1415...
+    double sin = Math.sin(pi / 2); // sin is 1.0
+    double cos = Math.cos(pi); // cos90 is -1.0
+
+    double random = Math.random(); // a random value &gt;= 0.0 and &lt; 1.0
+
+    double floor = Math.floor(3.78); // floor is 3.0
+    double ceil = Math.ceil(4.15); // ceil is 5.0</code></pre> 
+  <h2 style="text-align: center;">The length of the hypotenuse</h2> 
+  <p>Let's assume we have a right-angled triangle (one angle is 90 degree). We know the lengths of the two sides: a = 3 and b = 4.</p> 
+  <p>To calculate the length of hypotenuse we can write the following code:</p> 
+  <pre><code class="language-java">double a = 3, b = 4;
+    double c = Math.hypot(a, b); // c is 5.0</code></pre> 
+  <p>As you can see, the Math class has a lot of methods for performing numeric calculations.</p> 
+  <h2 style="text-align: center;">IDE tips &amp; tricks</h2> 
+  <p>Programming is much more about understanding and reading existing code than about writing new code. While learning, it is also quite important to see your code as a whole and understand how it works.</p> 
+  <p>When you use any variable, function, or method and need a tip on how it works, let the code speak for itself. Look at the declaration with Cmd + Y:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/YCaLuQs.png" width="400"></p>
+  <p></p> 
+  <p>Or press Cmd + B to navigate to the declaration of an entity; use it one more time on the declaration to see the list of usages:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/XNvFFlM.png" width="400"></p>
+  <p></p>
+ </body>
+</html>

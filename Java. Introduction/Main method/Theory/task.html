@@ -1,0 +1,77 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">The declaration of the main method</h1> 
+  <p>Java is primarily an object-oriented language. It means a Java program can be considered to be a collection of objects that communicate via calling each other's methods. A typical Java program includes a lot of classes, interfaces, objects, and other concepts from object-oriented programming.</p> 
+  <p>Even the simplest "procedural-style" program should have at least one class and the main method inside it to start the program. The main method is the entry point for any applications. Ever since Java 7 there has been no other way to start an application without this method (excluding the case when you start your application inside a special container for applications but it is not considered in this course).</p> 
+  <p>Let's see an example of the simplest application that prints the text "Hello, Java" in the standard output:</p> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+    System.out.println("Hello, Java");
+  }
+}</code></pre> 
+  <p>Here is a class named <em>Task</em>. The class contains the main method for starting the program.</p> 
+  <p>It is important to mention that a class containing the main method can have any name, but the main method should always have the same name.</p> 
+  <p>Let's take a closer look at the declaration of the main method:</p> 
+  <pre><code class="language-java">public static void main(String[] args)</code></pre> 
+  <ul> 
+   <li>The keyword <em>public</em> indicates that the method can be invoked from everywhere</li> 
+   <li>The keyword <em>static</em> indicates the method can be invoked without creating an instance of the class</li> 
+   <li>The keyword <em>void</em> indicates the method doesn't return any value</li> 
+   <li>The array variable <em>args</em> contains arguments entered at the command line if there are no arguments then the array is empty </li> 
+  </ul> 
+  <p>As you can see, even the simplest Java application contains a lot of concepts. All of them will be studied in the next few topics which relate to methods and object-oriented programming. For now you just need to understand how to write and run a simple Java program with the main method.</p> 
+  <h2 style="text-align: center;">Invalid declarations of the main method</h2> 
+  <p>If the main method has an invalid declaration, two cases are possible:</p> 
+  <ul> 
+   <li>your program cannot be compiled</li> 
+   <li>your program is successfully compiled but can't be started</li> 
+  </ul> 
+  <h3>Your program cannot be compiled</h3> 
+  <p>It is the case when the main method declaration breaks the syntax of Java.</p> 
+  <p>Example: no returning value (even void)</p> 
+  <pre><code class="language-java">class Task {
+  public static main(String[] args) {
+    System.out.println("Hello, Java");
+  }
+}</code></pre> 
+  <p>Example: a mistake in the keyword (pubic instead of public)</p> 
+  <pre><code class="language-java">class Task {
+  pubic static void main(String[] args) {
+    System.out.println("Hello, Java");
+  }
+}</code></pre> 
+  <h3>A program can be compiled but cannot be run</h3> 
+  <p>It is the case when the main method has a correct declaration as a regular method but it doesn't satisfy the specific requirement of the main method.</p> 
+  <p>Examples: should be String[] args</p> 
+  <pre><code class="language-java">class Task {
+  public static main(String args) {
+    System.out.println("Hello, Java");
+  }
+}</code></pre> 
+  <p>Example: there is no keyword static</p> 
+  <pre><code class="language-java">class Task {
+  public void main(String[] args) {
+    System.out.println("Hello, Java");
+  }
+}</code></pre> 
+  <p>In both cases, an error happens at runtime.</p> 
+  <h2 style="text-align: center;">Conclusion</h2> 
+  <p>So, the main method is the entry point of any Java programs. It has a very specific syntax which you need to remember.</p> 
+  <h2 style="text-align: center;">IDE tips &amp; tricks</h2> 
+  <p>Mistakes are an essential part of successful learning. They can also be very annoying and drain your motivation. The IDE helps you with code errors, by alerting you to the most common ones and suggesting solutions.</p> 
+  <p>Take a look at the code example from the “Invalid declarations of the main method” above. The red squiggly line under the code means there’s something wrong. Put the cursor on the highlighted code to see what the issue is:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/KN5ekDy.png" width="400"></p>
+  <p></p> 
+  <p>You can use the red bulb or press Alt + Enter to see a list of suggested fixes.</p> 
+  <p>Note the red icon at the top right. It shows you that there are some errors in the file. Hover over the red stripe to see the list of errors. Click on it to navigate to the line with the error and fix it:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/2j1f14G.png" width="400"></p>
+  <p></p> 
+  <p>When everything is fixed, there is a green check icon in the right top corner:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/eedLZPY.png" width="400"></p>
+  <p></p>
+ </body>
+</html>

@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:id="@+id/input_text"
         android:textColor="@color/white"
         android:gravity="center"
@@ -19,7 +19,7 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Out"
+        android:text="@string/sign_out"
         android:id="@+id/logout_btn"
         android:layout_centerHorizontal="true"
         android:layout_margin="90dp"

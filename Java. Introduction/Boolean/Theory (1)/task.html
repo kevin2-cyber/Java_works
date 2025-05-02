@@ -1,0 +1,68 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Relational operators</h1> 
+  <p>A <strong>relational operator </strong>tests or defines some kind of relation between two operands.</p> 
+  <p>Java has six relational operators:</p> 
+  <ul> 
+   <li>== (equal to)</li> 
+   <li>!= (not equal to)</li> 
+   <li>&gt; (greater than)</li> 
+   <li>&gt;= (greater than or equal to)</li> 
+   <li>&lt; (less than)</li> 
+   <li>&lt;= (less than or equal to)</li> 
+  </ul> 
+  <p>The result of applying a relational operator to operands is the boolean type (<strong>true</strong> or <strong>false</strong>).</p> 
+  <p>Operators == and != can be applied to operands of any primitive types, but operators &gt;, &gt;=, &lt;, &lt;= cannot be applied to boolean operands.</p> 
+  <p>In expressions, the relational operators have a lower priority than arithmetic operators.</p> 
+  <h2 style="text-align: center;">Comparing integer numbers</h2> 
+  <p>Relational operators allow you to easily compare two integer numbers:</p> 
+  <pre><code class="language-java">int num1 = 4;
+    int num2 = 2;
+
+    boolean b1 = num1 == num2; // false
+    boolean b2 = num1 &gt; num2;  // true
+
+    boolean b3 = 500 != 500;   // false
+    boolean b4 = 300 &lt;= 300;   // true</code></pre> 
+  <p>We can compare <strong>long</strong>s, <strong>byte</strong>s, and <strong>short</strong>s in the same way.</p> 
+  <p>In the following example, first, the sums will be calculated and then will be compared using the operator &gt;:</p> 
+  <pre><code class="language-java">long number = 1000;
+    boolean result = number + 10 &gt; number + 9; // 1010 &gt; 1009 is true</code></pre> 
+  <h2 style="text-align: center;">Comparing characters</h2> 
+  <p>Characters are ordered, it's possible to compare two characters by their code values using any relational operations.</p> 
+  <p>Characters can be compared ( ==, !=, &lt;, &lt;=, &gt;, &gt;=) by their codes:</p> 
+  <pre><code class="language-java">System.out.println('a' &lt; 'b');  // prints "true"
+    System.out.println('a' == 'a'); // prints "true"
+    System.out.println('e' &lt; 'E');  // prints "false"</code></pre> 
+  <h2 style="text-align: center;">Comparing floating-point numbers</h2> 
+  <p>During the operation with floating-point numbers, errors can be accumulated.</p> 
+  <p>Do not use == or != when comparing floating-point numbers in Java. Instead, if you'd like to compare two floating-point values a and b, use the standard way:</p> 
+  <pre><code class="language-java">Math.abs(a - b) &lt; eps</code></pre> 
+  <p>It means the absolute value of the difference is less than a certain epsilon.</p> 
+  <p>Here is an example why it's important:</p> 
+  <pre><code class="language-java">double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1; // 0.99999...
+
+    System.out.println(val == 1.0); // it prints "false"
+    System.out.println(Math.abs(val - 1.0) &lt; 1e-6); // it prints "true"</code></pre> 
+  <h2 style="text-align: center;">Joining relational operations using logical operators</h2> 
+  <p>In Java, you cannot write an expression like this:</p> 
+  <pre><code class="language-java">a &lt;= b &lt;= c</code></pre> 
+  <p>Instead, you should join two boolean expressions using logical operators like || and &amp;&amp;.</p> 
+  <p>For example, we'd like to check the expression:</p> 
+  <pre><code class="language-java">100 &lt; number &lt; 200</code></pre> 
+  <p>In Java we should write something like this:</p> 
+  <pre><code class="language-java">number &gt; 100 &amp;&amp; number &lt; 200</code></pre> 
+  <p>Also, we can write with parentheses:</p> 
+  <pre><code class="language-java">(number &gt; 100) &amp;&amp; (number &lt; 200)</code></pre> 
+  <p>But parentheses are not necessary here because relational operators have the higher priority than logical operators.</p> 
+  <p>Here is a more general example of variables:</p> 
+  <pre><code class="language-java">//the code checks that the value of number belongs to a range
+    
+    int number = ...             // it has a value
+    int low = 100, high = 200;   // borders
+
+    boolean inRange = number &gt; low &amp;&amp; number &lt; high;  // join two expressions using AND</code></pre> 
+  <p>So, logical operators allow you to join a sequence of relational operations into one expression.</p>
+ </body>
+</html>

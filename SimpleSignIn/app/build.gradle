@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.codelab.simplesignin"
         minSdk 30
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -30,15 +30,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.codelab.simplesignin'
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'jp.wasabeef:glide-transformations:4.3.0'
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
     // kapt 'com.github.bumptech.glide:compiler:4.13.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

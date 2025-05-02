@@ -1,0 +1,62 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Variables</h1> 
+  <p>A variable is a named storage for a value. It has a name (identifier) and a type.</p> 
+  <p>The name identifies a variable in some context. It's possible to read and change the value of a variable by its name.</p> 
+  <p>The general form for declaring variables is the following:</p> 
+  <pre><code class="language-java">DataType variableName;</code></pre> 
+  <p>The type (data type) of a variable determines which values can be stored in the variable and the possible operations you can perform on them.</p> 
+  <h2 style="text-align: center;">Data types</h2> 
+  <p>Java is a <strong>statically typed</strong> programming language, which means that every variable and every expression has a type that is known at the compile time.</p> 
+  <p>All data types are separated into two groups: <strong>primitive types</strong> and <strong>references types</strong>. </p> 
+  <p>A <strong>primitive type</strong> variable stores a simple value (such as a number or character). Java has eight primitive data types. They can be divided into four groups:</p> 
+  <ul> 
+   <li>integer numbers: <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong> (for example, 83 is an integer number) </li> 
+   <li>floating-point numbers: <strong>float</strong>, <strong>double</strong> (for example, 3.1415 is a floating point number) </li> 
+   <li>logical type: <strong>boolean</strong> (true or false)</li> 
+   <li>characters: <strong>char</strong> (for example, 'a', '3')</li> 
+  </ul> 
+  <p>The most used primitive types are <strong>int</strong>, <strong>long</strong>, <strong>boolean</strong>, <strong>char</strong> and <strong>double</strong>.</p> 
+  <p>A <strong>reference type</strong> variable stores an address in memory where the data is located. The data can be made up as a complex structure that includes other data types as their parts.</p> 
+  <p>We will often use the reference type String. It represents a sequence of characters like "abc" or "Hello, Java".</p> 
+  <p>Let's declare a variable named number of the type int:</p> 
+  <pre><code class="language-java">int number;</code></pre> 
+  <p>Here is a variable named text of the type String:</p> 
+  <pre><code class="language-java">String text;</code></pre> 
+  <p>To assign a value to a variable we should use the special operator.</p> 
+  <h2 style="text-align: center;">The assignment operator</h2> 
+  <p>Java has a special operator denoted as =. It assigns a value to a variable.</p> 
+  <p>In this case, the variable has to be declared already:</p> 
+  <pre><code class="language-java">variableName = value;</code></pre> 
+  <p>It is also possible to declare and initialize a variable in one line:</p> 
+  <pre><code class="language-java">DataType variableName = value;</code></pre> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+// put your code here
+    int one = 1; // declares an integer variable "one" and assigns the value 1 to it
+    int two; // declares an integer variable "two"
+    two = 2; // assign the value 2 to the variable "two"
+    int three = 3, four = 4; // declares two integer variables and assigns values to them
+  }
+}</code></pre> 
+  <p>To read the value of a variable you should write its name.</p> 
+  <p>For example, let's print the variables:</p> 
+  <pre><code class="language-java">System.out.println(one); // prints 1
+    System.out.println(two); // prints 2
+    System.out.println(three); // prints 3
+    System.out.println(four); // prints 4</code></pre> 
+  <p>In the following example, the variable five is declared and initialized with the value of another variable:</p> 
+  <pre><code class="language-java">int five = four; // read the value of the variable "four" and assign it to the variable "five";</code></pre> 
+  <p>Here are some more variables:</p> 
+  <pre><code class="language-java">char ch = 'A'; // declare a character variable named "ch" and assign 'A' to it
+    String str = "Hello, Java"; // declare a string variable named "str" and assign text to it
+    double pi = 3.1415; // declare a double variable named "pi" and assign 3.1415 to it</code></pre> 
+  <p>For more details about variables go here: <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html" rel="nofollow noopener noreferrer">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html</a> </p> 
+  <h2 style="text-align: center;">IDE tips &amp; tricks</h2> 
+  <p>Code autocompletion can help you to find the right variable. Once declared, a variable is added to the autocompletion list. Just start typing or simply press Ctrl + Space to get a list of all the options:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/XdYBO7f.png" width="400"></p>
+  <p></p>
+ </body>
+</html>

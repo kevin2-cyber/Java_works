@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tial</string>
+    <string name="welcome">Welcome to Easy Notes App</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
+</resources>

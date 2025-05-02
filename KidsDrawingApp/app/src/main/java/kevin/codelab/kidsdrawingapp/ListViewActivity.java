@@ -9,7 +9,7 @@ import kevin.codelab.kidsdrawingapp.databinding.ActivityListviewBinding;
 public class ListViewActivity extends AppCompatActivity {
 
     @Nullable
-    private ActivityListviewBinding binding;
+    ActivityListviewBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

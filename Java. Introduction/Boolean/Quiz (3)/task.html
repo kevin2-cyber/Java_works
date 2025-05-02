@@ -1,0 +1,28 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Quiz</h1> 
+  <p>You would like to offer Java developer jobs to several candidates. Select all the candidates to receive such offers according to your company rules.</p> 
+  <p>Your company has a special rule written in Java for decision-making:</p> 
+  <pre><code class="language-java">boolean offerAJob =
+       (knowJava &amp;&amp; yearsOfExperienceInJava &gt;= 1) ||
+               (knowPython &amp;&amp; yearsOfExperienceInPython &gt;= 3);</code></pre> 
+  <p><strong>A small explanation</strong>:</p> 
+  <ul> 
+   <li><i>knowJava</i> is a boolean variable that shows whether the candidate knows Java or not</li> 
+   <li><i>knowPython</i> is a boolean variable that shows whether the candidate knows Python or not</li> 
+   <li><i>yearsOfExperienceInJava</i> is an int variable that shows how many years of Java programming the candidate has</li> 
+   <li><i>yearsOfExperienceInPython</i> is another int variable that shows how many years of Python programming the candidate has</li> 
+  </ul> 
+  <p><strong>The list of candidates with their skills</strong>:</p> 
+  <ul> 
+   <li>John: <i>knowJava</i> = true; <i>yearsOfExperienceInJava</i> = 1; <i>knowPython</i> = false; <i>yearsOfExperienceInPython</i> = 0;</li> 
+   <li>Mary: <i>knowJava</i> = false; <i>yearsOfExperienceInJava</i> = 0; <i>knowPython</i> = true; <i>yearsOfExperienceInPython</i> = 3;</li> 
+   <li>Olivia: <i>knowJava</i> = true; <i>yearsOfExperienceInJava</i> = 0; <i>knowPython</i> = true; <i>yearsOfExperienceInPython</i> = 2;</li> 
+   <li>Alexander: <i>knowJava</i> = true; <i>yearsOfExperienceInJava</i> = 3; <i>knowPython</i> = true; <i>yearsOfExperienceInPython</i> = 2;</li> 
+   <li>Andrew: <i>knowJava</i> = false; <i>yearsOfExperienceInJava</i> = 1; <i>knowPython</i> = false; <i>yearsOfExperienceInPython</i> = 1;</li> 
+   <li>Emily: <i>knowJava</i> = false; <i>yearsOfExperienceInJava</i> = 0; <i>knowPython</i> = true; <i>yearsOfExperienceInPython</i> = 2;</li> 
+  </ul> 
+  <p><strong>Note</strong>: Sometimes a candidate may have a programming language experience but only a limited knowledge of a programming language, which means we may consider that there is no programming language at all.</p>
+ </body>
+</html>
