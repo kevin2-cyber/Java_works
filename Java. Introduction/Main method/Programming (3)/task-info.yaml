@@ -1,0 +1,18 @@
+type: code
+custom_name: Programming
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Main {
+
+        public static int main(String[] args) {
+            System.out.println("Hello, Java!");
+        }
+    }
+  learner_created: false
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 18:16:06 UTC
+record: -1

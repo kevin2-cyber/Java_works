@@ -1,0 +1,60 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Comments in Java code</h1> 
+  <p>Inside a Java program, you can write special text which will be ignored by the java compiler - known as comments. They allow you to exclude code from the compilation process (disable it) or clarify a piece of code to yourself or other developers.</p> 
+  <p>The Java programming language supports three kinds of comments.</p> 
+  <h2 style="text-align: center;">End-of-line comments</h2> 
+  <p>The java compiler ignores any text from // to the end of the line:</p> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+    // The line below will be ignored
+    // System.out.println("Hello, World");
+
+    // It prints the string "Hello, Java"
+    System.out.println("Hello, Java"); // You can write a comment here
+  }
+}</code></pre> 
+  <h2 style="text-align: center;">Multi-line comments</h2> 
+  <p>The compiler ignores any text from /* and the nearest */. It can be used as multiple and single-line comments:</p> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+    /* This is a single-line comment */
+   /*  This is a example of
+   a multi-line comment */
+  }
+}</code></pre> 
+  <p>You can use comments inside other comments:</p> 
+  <pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+    /*
+    int a = 1; // set a to 1
+    int b = 2; // set b to 2
+    int c = a + b; // calculate a + b
+    */
+  }
+}</code></pre> 
+  <h2 style="text-align: center;">Java documentation comments</h2> 
+  <p>The compiler ignores any text from /** to */ just like it ignores multi-line comments.</p> 
+  <p>This kind of comments can be used to automatically generate documentation about your source code using the <em> javadoc </em> tool. Usually, these comments are placed above declarations of classes, interfaces, methods, and so on. Also, in this case, some special labels such as @param, @return and others are used for controlling the tool. </p> 
+  <pre><code class="language-java">class Task {
+  /**
+   * The main method accepts an array of string arguments
+   *
+   * @param args from the command line
+   */
+  public static void main(String[] args) {
+// do nothing
+  }
+}</code></pre> 
+  <p><strong>Note</strong>: In this course we use comments in the theory and practice lessons to explain how and why our code works.</p> 
+  <p><strong>Hint</strong>: The <a href="https://htmlg.com/html-editor/" rel="nofollow noopener noreferrer"> Lorem Ipsum generator </a> feature of the online HTML editor fills your document with gibberish text which can be used as a placeholder until your final content is ready.</p> 
+  <h2 style="text-align: center;">IDE tips &amp; tricks</h2> 
+  <p>To better understand how comments work in Java, copy the examples from the text to the Editor and run them with the </p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="20" src="https://i.imgur.com/DIOwj3t.png"></p> icon on the left gutter or ⌃⇧R shortcut, take a look at the output:
+  <p></p> 
+  <p></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" src="https://i.imgur.com/JdcYxiH.png" width="400"></p>
+  <p></p>
+ </body>
+</html>

@@ -1,0 +1,19 @@
+type: stepik
+title: Java. Introduction
+language: English
+summary: This is an introductory course to Java. Join the course to get the basic
+  information about the language, to learn about variables and types, and write your
+  very first Java program.<br/><br/>Learn more at <a href="https://stepik.org/course/6858">https://stepik.org/course/6858</a>
+programming_language: Java
+content:
+- Intro
+- Comments
+- Main method
+- Variables and Types
+- Integer
+- Boolean
+- Floating-point
+- Math
+- Character
+- Type Casting
+mode: Study

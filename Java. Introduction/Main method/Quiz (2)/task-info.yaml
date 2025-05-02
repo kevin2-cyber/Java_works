@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: a
+- text: b
+- text: c
+- text: d
+- text: e
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 18:28:22 UTC
+record: -1
+selected_options:
+- 1
+- 2
+- 4
+custom_name: Quiz

@@ -1,0 +1,46 @@
+<html>
+ <head></head>
+ <body>
+  <h1 style="text-align: center;">Rules for naming variables</h1> 
+  <p>Java has some rules for naming variables:</p> 
+  <ul> 
+   <li>names are case-sensitive</li> 
+   <li>a name can include Unicode letters, digits, and two special characters ($, _)</li> 
+   <li>a name can't start with a digit</li> 
+   <li>a name must not be a keyword (class, static, and int are illegal names)</li> 
+  </ul> 
+  <p>You cannot break these rules, otherwise, your program will not compile.</p> 
+  <p>Here are some legal names of variables:</p> 
+  <pre><code class="language-java">number, $ident, bigValue, _val, abc, k, var</code></pre> 
+  <p>And here are some illegal ones:</p> 
+  <pre><code class="language-java">@ab, 1c, !ab, class</code></pre> 
+  <p>Ever since Java 9, the single character _ is an illegal way to name a variable, but _a and __ are legal names.</p> 
+  <h2 style="text-align: center;">Naming conventions for variables</h2> 
+  <p>Also, there are naming conventions for naming variables:</p> 
+  <ul> 
+   <li>if a variable name has a single word it should be in lowercase (for instance: number, val)</li> 
+   <li>if a variable name includes multiple words it should be in lowerCamelCase, i.e. the first word should be in lowercase and each word after the first has its first letter written in uppercase (for instance: numberOfCoins) </li> 
+   <li>variable names should not start with _ or $ characters, even though both are allowed</li> 
+  </ul> 
+  <p>These conventions are not required, but it is strongly recommended to follow them. They make your code more readable for yourself and other Java programmers.</p> 
+  <h2 style="text-align: center;">IDE tips &amp; tricks</h2> 
+  <p>Inspired by the best community practices, IntelliJ IDEA checks your code for many types of possible errors and code smells. Naming rules and conventions are among them.</p> 
+  <p>If you try one of the examples above and declare a variable with an invalid name, the IDE will highlight it as an error and suggest a quick fix (within the red bulb or Alt + Enter shortcut):</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/apOUN00.png" width="400"></p>
+  <p></p> 
+  <p>You can also tell the IDE to check your variables for naming conventions. Go to Preferences | Editor | Inspections | Java | Naming conventions and switch on the <em>Local variable naming convention </em>inspection:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/9KwVlp9.png" width="400"></p>
+  <p></p> 
+  <p>Now all the inappropriate names will be highlighted as well:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/47GE05I.png" width="400"></p>
+  <p></p> 
+  <p>IntelliJ IDEA can also declare a new variable for you with a quick intention action. Just start with a value, and then invoke the intention action with Alt + Enter:</p> 
+  <p></p>
+  <p style="text-align: center;"><img class="image-fullsize" src="https://i.imgur.com/OlZWrCQ.png" width="400"></p>
+  <p></p> 
+  <p>All of the <a href="https://www.jetbrains.com/help/idea/disabling-and-enabling-inspections.html" rel="nofollow noopener noreferrer">inspections can be switched on or off</a>, or configured as necessary, as well as the <a href="https://www.jetbrains.com/help/idea/disabling-intention-actions.html" rel="nofollow noopener noreferrer">intention actions</a>.</p>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Java programs are executed on the Java Virtual Machine to reach the platform
+    independence
+- text: Java programs are executed on the Java Virtual Machine if the operating system
+    is not Linux
+- text: Java programs have a special syntax to reach the platform independence
+- text: Java programs depend directly on the computer hardware and the operating system
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Solved
+feedback:
+  message: Correct solution
+  time: Sun, 17 Oct 2021 13:09:43 UTC
+record: -1
+selected_options:
+- 0
+custom_name: Quiz
